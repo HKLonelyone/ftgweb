@@ -1,0 +1,297 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft JhengHei", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 60px;
+}
+
+.background-section {
+    background-image: url('image/background.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 60px;
+}
+
+.image-buttons {
+    position: absolute;
+    top: 90px;
+    right: 400px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.button {
+    width: 100px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.modal-content button {
+    background-color: #8B0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+}
+
+.form-footer {
+    margin-top: 0;
+}
+
+.link-button {
+    color: #A8A8A8;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.social-login {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.social-login p {
+    color: #888;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+    margin: 0 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icon1 a {
+    color: #366af7;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #366af7;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-icon2 a {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ff0000;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#registerModal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+    max-width: 80%;
+    text-align: left;
+}
+
+#registerModal h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
+}
+
+#registerModal input,
+#registerModal select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#registerModal .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#registerModal .form-row>div {
+    flex: 1;
+}
+
+#registerModal .form-row .half-width {
+    flex: 1;
+}
+
+#registerModal .form-row .full-width {
+    flex: 2;
+}
+
+#registerModal .form-row .address-part>div {
+    flex: 1;
+}
+
+#registerModal .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#registerModal .form-footer {
+    color: grey;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#registerModal .buttons-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#registerModal .form-row .secondary-div1 {
+    background-color: #A58C6D;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    width: 23%;
+    max-width: 23%;
+    box-sizing: border-box;
+}
+
+#registerModal .buttons-row button {
+    width: auto;
+}
+
+#registerModal .form-row .address-part>div:nth-child(1) {
+    flex: 20%;
+}
+
+#registerModal .form-row .address-part>div:nth-child(2) {
+    flex: 20%;
+}
+
+#registerModal .form-row .address-part>div:nth-child(3) {
+    flex: 20%;
+}
+
+#registerModal .form-row .address-part>div:nth-child(4) {
+    flex: 40%;
+}
