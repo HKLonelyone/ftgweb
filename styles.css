@@ -1,5 +1,4 @@
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -31,25 +30,26 @@ html {
 .background-section {
     background-image: url('image/background.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 110vh;
+    position: fixed;
     top: 60px;
 }
 
 .image-buttons {
     position: absolute;
-    top: 90px;
-    right: 400px;
+    top: 120px;
+    right: 350px;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
+    flex-direction: row;
 }
 
 .button {
-    width: 100px;
-    height: 300px;
+    width: 120px;
+    height: 350px;
     cursor: pointer;
 }
 
@@ -62,15 +62,19 @@ html {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 50px;
+    margin: 5% auto;
+    padding: 20px;
     border: 1px solid #888;
-    width: 300px;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
     text-align: center;
+    position: relative;
 }
 
 .close {
@@ -192,16 +196,7 @@ html {
 }
 
 #registerModal .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 600px;
-    max-width: 80%;
-    text-align: left;
+    margin: 10% auto;
 }
 
 #registerModal h2 {
@@ -297,21 +292,11 @@ html {
 }
 
 #forgotPasswordModal .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
+    margin: 10% auto;
 }
 
 #successPopup .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
+    margin: 10% auto;
 }
 
 #successPopup h2 {
@@ -337,4 +322,136 @@ html {
 
 #successPopup .button:hover {
     background-color: #a00000;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 20px;
+        height: 50px;
+    }
+    .background-section {
+        background-image: url('image/mobile_background.png');
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 20px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .image-buttons {
+        right: 20px;
+        top: 120px;
+        gap: 30px;
+        flex-direction: row;
+        position: absolute;
+    }
+
+    .button {
+        width: 120px;
+        height: 350px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    #registerModal .form-row {
+        flex-direction: column;
+    }
+
+    #registerModal .form-row>div {
+        flex: 1;
+        margin-bottom: 10px;
+    }
+
+    #registerModal .form-row .address-part>div {
+        flex: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal-content button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #registerModal .buttons-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #registerModal .buttons-row button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding-left: 10px;
+        height: 40px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .image-buttons {
+        right: 10px;
+        top: 300px;
+        gap: 15px;
+    }
+
+    .button {
+        width: 100px;
+        height: 250px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 15% auto;
+        padding: 15px;
+    }
+
+    #registerModal .form-row {
+        flex-direction: column;
+    }
+
+    #registerModal .form-row>div {
+        flex: 1;
+        margin-bottom: 8px;
+    }
+
+    #registerModal .form-row .address-part>div {
+        flex: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .modal-content button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #registerModal .buttons-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #registerModal .buttons-row button {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
