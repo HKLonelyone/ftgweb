@@ -345,15 +345,15 @@ body, html {
 
     .image-buttons {
         right: 20px;
-        top: 120px;
+        top: 80px;
         gap: 30px;
         flex-direction: row;
         position: absolute;
     }
 
     .button {
-        width: 120px;
-        height: 350px;
+        width: 100px;
+        height: 250px;
     }
 
     .modal-content {
@@ -406,14 +406,14 @@ body, html {
     }
 
     .image-buttons {
-        right: 10px;
-        top: 300px;
+        right: 30px;
+        top: 250px;
         gap: 15px;
     }
 
     .button {
-        width: 100px;
-        height: 250px;
+        width: 70px;
+        height: 200px;
     }
 
     .modal-content {
