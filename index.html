@@ -122,16 +122,44 @@
                         <input type="tel" id="phone" placeholder="電話*" required>
                     </div>
                 </div>
+                <div id="additionalMembers"></div>
                 <div class="form-row buttons-row">
                     <div class="form-footer">
                         <div class="link-button">登入</div> | <div class="link-button">忘記密碼</div>
                     </div>
-                    <button type="button" class="secondary-button">+ 新增成員</button>
+                    <button type="button" class="secondary-button" id="addMemberBtn">+ 新增成員</button>
                     <button type="submit">註冊</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>忘記密碼</h2>
+            <form>
+                <input type="email" placeholder="信箱 |" required>
+                <div class="form-actions">
+                    <button type="submit">送出</button>
+                    <div class="form-footer">
+                        <div id="showRegister" class="link-button">登入</div> | <div class="link-button">註冊</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="successPopup" class="modal">
+        <div class="modal-content">
+            <h2>寄送成功</h2>
+            <img src="image/sendEmail.png" alt="Success Image">
+            <p>請至信箱收信，進入驗證信網址，修改密碼</p>
+            <button id="closeSuccessPopup" class="link-button">確定</button>
+        </div>
+    </div>
+
+
 
     <script>
         var loginModal = document.getElementById("loginModal");
@@ -140,6 +168,55 @@
         var link_buttons = document.getElementsByClassName("link-button");
         var spans = document.getElementsByClassName("close");
         var showRegisterLink = document.getElementById("showRegister");
+        var forgotPasswordModal = document.getElementById("forgotPasswordModal");
+        var successPopup = document.getElementById("successPopup");
+        var closeSuccessPopupButton = document.getElementById("closeSuccessPopup");
+        var forgotPasswordForm = document.querySelector("#forgotPasswordModal form");
+
+        forgotPasswordForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            successPopup.style.display = "block";
+            forgotPasswordModal.style.display = "none";
+        });
+
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            successPopup.style.display = "block";
+        });
+
+        closeSuccessPopupButton.addEventListener("click", function () {
+            successPopup.style.display = "none";
+        });
+
+        window.onclick = function (event) {
+            if (event.target == successPopup) {
+                successPopup.style.display = "none";
+            }
+        };
+
+
+        var forgotPasswordLinks = document.querySelectorAll(".link-button");
+        forgotPasswordLinks.forEach(function (link) {
+            if (link.textContent.includes("忘記密碼")) {
+                link.addEventListener("click", function () {
+                    loginModal.style.display = "none";
+                    registerModal.style.display = "none";
+                    forgotPasswordModal.style.display = "block";
+                });
+            }
+        });
+
+        var forgotPasswordClose = forgotPasswordModal.getElementsByClassName("close")[0];
+        forgotPasswordClose.onclick = function () {
+            forgotPasswordModal.style.display = "none";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == forgotPasswordModal) {
+                forgotPasswordModal.style.display = "none";
+            }
+        };
+
 
         for (var i = 0; i < buttons.length; i++) {
             buttons[i].onclick = function () {
@@ -175,6 +252,51 @@
             var lunarBirthday = "計生日";
             document.getElementById("lunarBirthday").value = lunarBirthday;
         }
+        document.getElementById("addMemberBtn").onclick = function () {
+            var memberCount = document.querySelectorAll('.additional-member').length + 1;
+            var newMemberHtml = `
+        <div class="form-row additional-member">
+            <div class="secondary-div1">成員${memberCount}</div>
+        </div>
+        <div class="form-row">
+            <div class="half-width">
+                <label for="name${memberCount}">姓名</label>
+                <input type="text" id="name${memberCount}" placeholder="姓名*" required>
+            </div>
+            <div class="half-width">
+                <label for="gender${memberCount}">性別</label>
+                <select id="gender${memberCount}" required>
+                    <option value="">性別</option>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="half-width">
+                <label for="birthday${memberCount}">國曆生日</label>
+                <input type="date" id="birthday${memberCount}" placeholder="國曆生日" onchange="calculateLunarBirthday()">
+            </div>
+            <div class="half-width">
+                <label for="lunarBirthday${memberCount}">農曆生日</label>
+                <input type="text" id="lunarBirthday${memberCount}" placeholder="農曆生日" readonly>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="half-width">
+                <label for="time${memberCount}">時辰</label>
+                <select id="time${memberCount}">
+                    <option value="">時辰</option>
+                </select>
+            </div>
+            <div class="half-width">
+                <label for="phone${memberCount}">電話</label>
+                <input type="tel" id="phone${memberCount}" placeholder="電話*" required>
+            </div>
+        </div>`;
+            document.getElementById("additionalMembers").insertAdjacentHTML('beforeend', newMemberHtml);
+        };
+
 
     </script>
 </body>

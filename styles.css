@@ -295,3 +295,46 @@ html {
 #registerModal .form-row .address-part>div:nth-child(4) {
     flex: 40%;
 }
+
+#forgotPasswordModal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+#successPopup .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+#successPopup h2 {
+    color: #800000;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#successPopup p {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#successPopup .button {
+    background-color: #800000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#successPopup .button:hover {
+    background-color: #a00000;
+}
