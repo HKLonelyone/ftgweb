@@ -1,14 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
+.background {
     background-image: url('image/resetPW_background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    margin: 0;
-    padding-top: 60px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-position: center;
 }
 
 .navbar {
@@ -53,7 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 70px;
 }
 
 .title {
@@ -327,7 +321,7 @@ body {
     }
 
     .wrapper {
-        padding-top: 20px;
+        padding-top: 70px;
     }
 
     .title {
@@ -339,7 +333,7 @@ body {
 
     .container {
         padding: 20px;
-        max-width: none;
+        width: 300px;
         border-radius: 0;
     }
 
