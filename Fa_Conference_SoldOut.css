@@ -98,16 +98,24 @@
     border-bottom: 1px solid #ccc;
 }
 
-select option .sold-out {
-    color: red;
-    font-size: 0.9em;
+.section_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
-
+.section_title label {
+    font-size: 16px;
+    margin-right: 10px;
+}
 select {
-    font-size: 20px;
-    width: 25%;
-    height: 40px;
-    border-radius: 0px;
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.sold-out {
+    color: #960a1d;
 }
 
 .category {
@@ -121,97 +129,7 @@ select {
     max-width: 10%;
     box-sizing: border-box;
 }
-.selector{
-    width: 100%;
-    margin-left: -10px;
-}
 
-.items-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    width: 100%;
-    margin-left: 0;
-    margin-right: auto;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-    width: 300px;
-
-}
-
-.item:last-child {
-    border-bottom: none;
-}
-
-.item input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.item label {
-    flex-grow: 1;
-    color: #000000;
-    font-size: 14px;
-}
-
-.price {
-    font-weight: bold;
-}
-
-.sold-out {
-    color: red;
-    font-size: 0.9em;
-    margin-left: 5px;
-}
-
-.total-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-left: 350px;
-}
-
-.total-price {
-    color: red;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #d1bbae;
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-    background-color: #d1bbae;
-    position: relative;
-}
-
-input[type="checkbox"]:checked::before {
-    content: "\2714";
-    font-size: 14px;
-    color: white;
-    position: absolute;
-    right: 3px;
-    top: 0;
-}
-
-input[type="checkbox"]:disabled {
-    background-color: #e0e0e0;
-    border-color: #b0b0b0;
-    cursor: not-allowed;
-}
 
 .footer {
     background-image: url('image/Lighting_bottom.png');
