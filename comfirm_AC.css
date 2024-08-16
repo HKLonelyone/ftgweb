@@ -1,0 +1,107 @@
+.background {
+    background-image: url('image/resetPW_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: 108vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.success-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Noto Sans TC';
+}
+
+.success-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #6C4F2B;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.submit-btn {
+    background-color: #AB0A0A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    margin-top: 10px;
+    width: 150px;
+}
+
+@media (max-width: 768px) {
+    .background {
+        padding-top: 30px;
+        height: 100vh; /* 調整高度以適應不同屏幕 */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left bottom;
+        margin-left: -200px;
+    }
+
+    .success-box {
+        padding: 20px;
+        margin-left: 200px;
+    }
+
+    .success-title {
+        font-size: 24px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .success-message {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-title {
+        font-size: 20px;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .success-message {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+        width: 100px;
+    }
+}

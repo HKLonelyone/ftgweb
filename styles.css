@@ -17,6 +17,11 @@
     height: 60px;
 }
 
+.hide {
+    color: white;
+    user-select: none;
+}
+
 .background-section {
     background-image: url('image/background.png');
     background-size: cover;
@@ -58,7 +63,7 @@
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto;
-    padding: 20px;
+    padding: 50px;
     border: 1px solid #888;
     width: 90%;
     max-width: 600px;
@@ -83,15 +88,20 @@
 }
 
 .modal-content h2 {
-    color: #8B0000;
-    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #8E1212;
+    text-align: left;
 }
 
-.modal-content input {
-    width: 90%;
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
+    text-align: left;
 }
 
 .form-actions {
@@ -110,16 +120,17 @@
     width: 45%;
 }
 
-.form-footer {
-    margin-top: 0;
-}
-
 .link-button {
     color: #A8A8A8;
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
 }
+
+.form-footer {
+    margin-top: 0;
+}
+
 
 .social-login {
     margin-top: 20px;
@@ -186,7 +197,7 @@
 }
 
 #registerModal .modal-content {
-    margin: 10% auto;
+    margin: 5% auto;
 }
 
 #registerModal h2 {
@@ -196,7 +207,8 @@
 
 #registerModal input,
 #registerModal select {
-    width: 100%;
+    width: calc(100% - 20px);
+    /* 減去padding */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -223,7 +235,9 @@
 }
 
 #registerModal .form-row .address-part>div {
-    flex: 1;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #registerModal .form-actions {
@@ -265,34 +279,68 @@
     width: auto;
 }
 
+#registerModal .form-row .address-part>div {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
 #registerModal .form-row .address-part>div:nth-child(1) {
-    flex: 20%;
+    width: 10%;
 }
 
 #registerModal .form-row .address-part>div:nth-child(2) {
-    flex: 20%;
+    width: 10%;
 }
 
 #registerModal .form-row .address-part>div:nth-child(3) {
-    flex: 20%;
+    width: 10%;
 }
 
 #registerModal .form-row .address-part>div:nth-child(4) {
-    flex: 40%;
+    width: 70%;
 }
 
 #forgotPasswordModal .modal-content {
     margin: 10% auto;
 }
 
+#forgotPasswordModal .modal-content input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    text-align: left;
+    box-sizing: border-box;
+    margin-left: -2px;
+}
+
 #successPopup .modal-content {
-    margin: 10% auto;
+    background-color: #fefefe;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #successPopup h2 {
     color: #800000;
     font-size: 20px;
     margin-bottom: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #8E1212;
+
+
 }
 
 #successPopup p {
@@ -310,6 +358,34 @@
     cursor: pointer;
 }
 
+#registerModal label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#registerModal input[type="text"],
+#registerModal input[type="date"],
+#registerModal select {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#registerModal .form-row>div {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+
+#registerModal .form-row label {
+    margin-bottom: 10px;
+}
+
 #successPopup .button:hover {
     background-color: #a00000;
 }
@@ -319,6 +395,11 @@
         padding-left: 20px;
         height: 50px;
     }
+
+    .logo {
+        height: 50px;
+    }
+
     .background-section {
         background-image: url('image/mobile_background.png');
         background-size: cover;
@@ -326,19 +407,14 @@
         width: 100%;
         height: 100vh;
         position: fixed;
-        top: 20px;
-    }
-
-    .logo {
-        height: 50px;
+        top: 0;
     }
 
     .image-buttons {
         right: 20px;
         top: 80px;
-        gap: 30px;
+        gap: 20px;
         flex-direction: row;
-        position: absolute;
     }
 
     .button {
@@ -349,19 +425,22 @@
     .modal-content {
         width: 90%;
         margin: 10% auto;
+        padding: 20px;
     }
 
     #registerModal .form-row {
         flex-direction: column;
+        gap: 3px;
     }
 
     #registerModal .form-row>div {
-        flex: 1;
         margin-bottom: 10px;
+        gap: 3px;
     }
 
     #registerModal .form-row .address-part>div {
-        flex: 100%;
+        width: 100%;
+        gap: 3px;
     }
 
     .form-actions {
@@ -396,9 +475,9 @@
     }
 
     .image-buttons {
-        right: 30px;
-        top: 250px;
-        gap: 15px;
+        right: 15px;
+        top: 200px;
+        gap: 10px;
     }
 
     .button {
@@ -412,17 +491,14 @@
         padding: 15px;
     }
 
-    #registerModal .form-row {
-        flex-direction: column;
-    }
-
     #registerModal .form-row>div {
-        flex: 1;
         margin-bottom: 8px;
+        gap: 3px;
     }
 
     #registerModal .form-row .address-part>div {
-        flex: 100%;
+        width: 100%;
+        gap: 3px;
     }
 
     .form-actions {

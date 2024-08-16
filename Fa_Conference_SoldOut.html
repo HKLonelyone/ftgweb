@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +7,56 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="Fa_Conference_SoldOut.css">
 </head>
-
 <body>
     <div class="background">
-    <nav class="navbar">
-        <img src="image/Logo.png" alt="logo" class="logo">
-        <div class="right-section">
-            <img src="image/shopping_cart.png" alt="購物車" class="cart-icon">
-            <span class="user-name">張翼德</span>
-        </div>
-    </nav>
+        <nav class="navbar">
+            <img src="image/Logo.png" alt="logo" class="logo">
+            <div class="right-section">
+                <img src="image/shopping_cart.png" alt="購物車" class="cart-icon">
+                <span class="user-name">張翼德</span>
+            </div>
+        </nav>
 
-    <div class="wrapper">
-        <div class="title">梁皇寶懺</div>
+        <div class="wrapper">
+            <div class="title">梁皇寶懺</div>
 
-        <div class="container">
-            <div class="item-section">
-                <div class="section_title">
-                    <label for="session">選擇場次：</label>
-                    <select id="session">
-                        <option value="112.12.01">112.12.01 <span class="sold-out">(已售完)</span></option>
-                    </select>
-                </div>
+            <div class="container">
+                <div class="item-section">
+                    <div class="section_title">
+                        <label for="session">選擇場次：</label>
+                            <div class="select-selected">112.12.01 <span class="red">(已售完)</span></div>
+                    </div>
+                    <div class="space"></div>
 
-                <div class="footer">
-                    <span class="total-text">小計 | $0</span>
-                    <div class="buttons">
-                        <button class="cancel-btn">取消</button>
-                        <button class="submit-btn">報名</button>
+                    <div class="footer">
+                        <span class="total-text">小計 | $0</span>
+                        <div class="buttons">
+                            <button class="cancel-btn">取消</button>
+                            <button class="submit-btn">報名</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</body>
 
+    <script>
+        document.querySelector('.select-selected').addEventListener('click', function () {
+            this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.querySelectorAll('.select-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                document.querySelector('.select-selected').innerHTML = this.innerHTML;
+                document.querySelector('.select-items').style.display = 'none';
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!e.target.matches('.select-selected')) {
+                document.querySelector('.select-items').style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
