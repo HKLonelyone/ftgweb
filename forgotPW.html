@@ -7,26 +7,40 @@
     <title>重設密碼</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="forgotPW.css">
+    <script>
+        function showSuccessMessage(event) {
+            event.preventDefault();
+            document.querySelector('.wrapper').style.display = 'none';
+            document.querySelector('.background').classList.add('background-success');
+            document.querySelector('.success-box').style.display = 'flex';
+        }
+    </script>
 </head>
 
 <body>
     <div class="background">
-    <div class="wrapper background">
-        <div class="title">重設密碼</div>
+        <div class="wrapper">
+            <div class="title">重設密碼</div>
 
-        <div class="container">
-            <form>
-                <label for="new-password">請輸入新密碼</label>
-                <input type="password" id="new-password" required>
+            <div class="container">
+                <form onsubmit="showSuccessMessage(event)">
+                    <label for="new-password">請輸入新密碼</label>
+                    <input type="password" id="new-password" required>
 
-                <label for="confirm-password">再輸入一次</label>
-                <input type="password" id="confirm-password" required>
+                    <label for="confirm-password">再輸入一次</label>
+                    <input type="password" id="confirm-password" required>
 
-                <button type="submit" class="submit-btn">確定修改</button>
-            </form>
+                    <button type="submit" class="submit-btn">確定修改</button>
+                </form>
+            </div>
+        </div>
+        <div class="success-box">
+            <div class="success-title">已確認修改密碼</div>
+            <img src="image/clipboard.png" alt="Checkmark" class="icon">
+            <div class="success-message">請回首頁登入帳號</div>
+            <button onclick="window.location.href='index.html'" class="submit-btn">回首頁</button>
         </div>
     </div>
-</div>
 </body>
 
 </html>
