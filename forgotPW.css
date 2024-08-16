@@ -1,14 +1,9 @@
-body {
-    font-family: Arial, sans-serif;
+
+.background {
     background-image: url('image/resetPW_background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
     background-position: center;
-    margin: 0;
 }
 
 .wrapper {
@@ -17,6 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-top: 50px;
 }
 
 .title {
