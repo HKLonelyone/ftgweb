@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員專區</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="member.css">
+</head>
+
+<body>
+    <div class="background">
+        <nav class="navbar">
+            <img src="image/Logo.png" alt="logo" class="logo">
+            <div class="right-section">
+                <img src="image/shopping_cart.png" alt="購物車" class="cart-icon">
+                <span class="user-name">張翼德</span>
+            </div>
+        </nav>
+
+        <div class="wrapper">
+            <div class="title">會員專區</div>
+            <div class="container">
+                <div class="info-section">
+                    <div class="sidebar">
+                        <ul>
+                            <li class="active" id="common-info-tab">共同資料</li>
+                            <li id="personal-info-tab">個人資料</li>
+                            <li>交易記錄</li>
+                            <li>更改密碼</li>
+                            <li>登出</li>
+                        </ul>
+                    </div>
+                    <div class="main-content">
+                        <div id="common-info-content" class="content-section active">
+                            <p class="email">信箱<br>ikjhy234@gmail.com</p>
+                            地址
+                            <div class="address-section">
+                                <div class="address-input">
+                                    <label for="zip-code">郵遞區號</label>
+                                    <input type="text" id="zip-code" class="zip-code" placeholder="郵遞區號">
+                                </div>
+                                <div class="address-input">
+                                    <label for="city-select">縣市</label>
+                                    <select id="city-select" class="city-select">
+                                        <option value="" disabled selected>縣市</option>
+                                    </select>
+                                </div>
+                                <div class="address-input">
+                                    <label for="region-select">地區</label>
+                                    <select id="region-select" class="region-select">
+                                        <option value="" disabled selected>地區</option>
+                                    </select>
+                                </div>
+                                <div class="address-input">
+                                    <label for="address">地址</label>
+                                    <input type="text" id="address" class="address-input" placeholder="地址">
+                                </div>
+                            </div>
+                            <button class="confirm-button">確定</button>
+                        </div>
+
+                        <div id="personal-info-content" class="content-section">
+                            <div class="form-horizontal">
+                                <div class="form-row member-row">
+                                    <div class="member-select-group">
+                                        <label for="member-select" class="control-label">成員</label>
+                                        <div class="select-wrapper">
+                                            <select id="member-select" class="form-control">
+                                                <option value="member2">成員 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <button class="new-entry-button">+ 新增資料</button>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group half-width">
+                                        <label for="name" class="control-label">姓名</label>
+                                        <input type="text" id="name" value="100" class="form-control">
+                                    </div>
+                                    <div class="form-group half-width">
+                                        <label for="gender" class="control-label">性別</label>
+                                        <div class="select-wrapper-gender">
+                                            <select id="gender" class="form-control-gender">
+                                                <option value="male">男</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group half-width">
+                                        <label for="birthdate-gregorian" class="control-label">國曆生日</label>
+                                        <input type="date" id="birthdate-gregorian" value="1990-03-04"
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group half-width">
+                                        <label for="birthdate-lunar" class="control-label">農曆生日</label>
+                                        <input type="text" id="birthdate-lunar" value="90/闰09/09" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group half-width">
+                                        <label for="hour" class="control-label">時辰</label>
+                                        <input type="text" id="hour" value="子" class="form-control">
+                                    </div>
+                                    <div class="form-group half-width">
+                                        <label for="phone" class="control-label">電話</label>
+                                        <input type="tel" id="phone" value="0987654321" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group button-group">
+                                    <button class="confirm-button">確定</button>
+                                    <a href="#" class="delete-link">刪除資料</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="transaction-content" class="content-section">
+                            <div class="transaction-header">
+                                <label for="payment-date">付款時間：</label>
+                                <select id="payment-date">
+                                    <option>112.12.01 11:38:30</option>
+                                </select>
+                            </div>
+
+                            <div class="transaction-table">
+                                <div class="table-section">
+                                    <div class="table-header">
+                                        <div class="col-1">線上點燈</div>
+                                        <div class="col-2already-refund">$1200</div>
+                                        <div class="col-3 table-header-option">已退單</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="col-1">張翼德</div>
+                                        <div class="col-2">天公燈</div>
+                                        <div class="col-3">$600</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="col-1">張大帥</div>
+                                        <div class="col-2">天公燈</div>
+                                        <div class="col-3">$600</div>
+                                    </div>
+                                </div>
+
+                                <div class="table-section">
+                                    <div class="table-header">
+                                        <div class="col-1">文昌法會</div>
+                                        <div class="col-2">$2400</div>
+                                        <div class="col-3"><button class="refund-btn">退單</button></div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="col-1">張翼德</div>
+                                        <div class="col-2">文昌祈福</div>
+                                        <div class="col-3">$1200</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="col-1">張大帥</div>
+                                        <div class="col-2">文昌祈福</div>
+                                        <div class="col-3">$1200</div>
+                                    </div>
+                                </div>
+
+                                <div class="table-section">
+                                    <div class="table-header">
+                                        <div class="col-1">油香</div>
+                                        <div class="col-2">$2400</div>
+                                        <div class="col-3"><button class="refund-btn">退單</button></div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="col-1">張翼德</div>
+                                        <div class="col-2">樂捐樂捐</div>
+                                        <div class="col-3">$1200</div>
+                                    </div>
+                                    <div class="table-row">
+                                        <div class="col-1">張大帥</div>
+                                        <div class="col-2">恭喜發財</div>
+                                        <div class="col-3">$1200</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="change-password-content" class="content-section">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="new-password" class="control-label">新密碼</label>
+                                    <input type="password" id="new-password" class="form-control"
+                                        placeholder="••••••••••••••">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password" class="control-label">確認密碼</label>
+                                    <input type="password" id="confirm-password" class="form-control"
+                                        placeholder="••••••••••••••">
+                                </div>
+                                <div class="form-group button-group">
+                                    <button class="confirm-button">確定</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="refundModal" class="modal">
+                            <div class="modal-content">
+                                <h2>是否確定要退單</h2>
+                                <div class="modal-icon">
+                                    <img src="image/alert.png" alt="Warning Icon">
+                                </div>
+                                <p>退單金額最晚會在數天之後退至付款信用卡</p>
+                                <div class="modal-buttons">
+                                    <button id="cancelRefund" class="modal-button cancel">取消</button>
+                                    <button id="confirmRefund" class="modal-button confirm">確定</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="logoutModal" class="modal">
+                            <div class="modal-content">
+                                <h2>是否確定要登出</h2>
+                                <div class="modal-icon">
+                                    <img src="image/alert.png" alt="Warning Icon">
+                                </div>
+                                <div class="modal-buttons">
+                                    <button id="cancelLogout" class="modal-button cancel">取消</button>
+                                    <button id="confirmLogout" class="modal-button confirm">確定</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="successModal" class="modal">
+                            <div class="modal-content success-modal">
+                                <h2>修改成功</h2>
+                                <div class="success-icon">
+                                    <img src="image/correct.png" alt="Success Icon">
+                                </div>
+
+                                <button id="successConfirm" class="modal-button confirm">確定</button>
+                            </div>
+                        </div>
+
+                        <div id="changePasswordConfirmModal" class="modal">
+                            <div class="modal-content">
+                                <h2>是否確定要修改密碼</h2>
+                                <div class="modal-icon">
+                                    <img src="image/alert.png" alt="Warning Icon">
+                                </div>
+                                <div class="modal-buttons">
+                                    <button id="cancelChangePassword" class="modal-button cancel">取消</button>
+                                    <button id="confirmChangePassword" class="modal-button confirm">確定</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const changePasswordConfirmModal = document.getElementById("changePasswordConfirmModal");
+                const changePasswordButton = document.querySelector("#change-password-content .confirm-button");
+                const cancelChangePasswordButton = document.getElementById("cancelChangePassword");
+                const confirmChangePasswordButton = document.getElementById("confirmChangePassword");
+
+                if (changePasswordButton) {
+                    changePasswordButton.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        changePasswordConfirmModal.style.display = "block";
+                    });
+                }
+
+                cancelChangePasswordButton.addEventListener("click", function () {
+                    changePasswordConfirmModal.style.display = "none";
+                });
+
+                confirmChangePasswordButton.addEventListener("click", function () {
+                    console.log("密碼修改確認");
+                    changePasswordConfirmModal.style.display = "none";
+                });
+
+                window.addEventListener("click", function (event) {
+                    if (event.target == changePasswordConfirmModal) {
+                        changePasswordConfirmModal.style.display = "none";
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const successModal = document.getElementById("successModal");
+                const successConfirmButton = document.getElementById("successConfirm");
+                const commonInfoConfirmButton = document.querySelector("#common-info-content .confirm-button");
+                if (commonInfoConfirmButton) {
+                    commonInfoConfirmButton.addEventListener("click", showSuccessModal);
+                }
+
+                const personalInfoConfirmButton = document.querySelector("#personal-info-content .confirm-button");
+                if (personalInfoConfirmButton) {
+                    personalInfoConfirmButton.addEventListener("click", showSuccessModal);
+                }
+
+                successConfirmButton.addEventListener("click", function () {
+                    successModal.style.display = "none";
+                });
+
+                function showSuccessModal() {
+                    console.log("數據已提交");
+
+                    successModal.style.display = "block";
+                }
+
+                window.addEventListener("click", function (event) {
+                    if (event.target == successModal) {
+                        successModal.style.display = "none";
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const logoutButton = document.querySelector(".sidebar li:last-child");
+                const modal = document.getElementById("logoutModal");
+                const cancelButton = document.getElementById("cancelLogout");
+                const confirmButton = document.getElementById("confirmLogout");
+
+                logoutButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    modal.style.display = "block";
+                });
+
+                cancelButton.addEventListener("click", function () {
+                    modal.style.display = "none";
+                });
+
+                confirmButton.addEventListener("click", function () {
+                    console.log("登出確認");
+                    modal.style.display = "none";
+                });
+
+                window.addEventListener("click", function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const refundButtons = document.querySelectorAll(".refund-btn");
+                const modal = document.getElementById("refundModal");
+                const cancelButton = document.getElementById("cancelRefund");
+                const confirmButton = document.getElementById("confirmRefund");
+
+
+                refundButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        modal.style.display = "block";
+                    });
+                });
+
+                cancelButton.addEventListener("click", function () {
+                    modal.style.display = "none";
+                });
+
+                confirmButton.addEventListener("click", function () {
+                    console.log("退單確認");
+                    modal.style.display = "none";
+                });
+
+                window.addEventListener("click", function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", () => {
+                const tabs = document.querySelectorAll(".sidebar li");
+                const contentSections = document.querySelectorAll(".content-section");
+
+                tabs.forEach((tab, index) => {
+                    tab.addEventListener("click", () => {
+                        tabs.forEach(tab => tab.classList.remove("active"));
+                        tab.classList.add("active");
+
+                        contentSections.forEach(section => section.style.display = "none");
+
+                        if (index === 2) {
+                            document.querySelector("#transaction-content").style.display = "block";
+                        } else if (index === 3) {
+                            document.querySelector("#change-password-content").style.display = "block";
+                        } else {
+                            contentSections[index] && (contentSections[index].style.display = "block");
+                        }
+                    });
+                });
+            });
+            document.addEventListener("DOMContentLoaded", () => {
+                const tabs = document.querySelectorAll(".sidebar li");
+                const contentSections = document.querySelectorAll(".content-section");
+
+                tabs.forEach((tab, index) => {
+                    tab.addEventListener("click", () => {
+                        tabs.forEach(tab => tab.classList.remove("active"));
+                        tab.classList.add("active");
+
+                        contentSections.forEach(section => section.style.display = "none");
+
+                        if (index === 2) {
+                            document.querySelector("#transaction-content").style.display = "block";
+                        } else {
+                            contentSections[index] && (contentSections[index].style.display = "block");
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const tabs = document.querySelectorAll(".sidebar li");
+                const contentSections = document.querySelectorAll(".content-section");
+
+                tabs.forEach((tab, index) => {
+                    tab.addEventListener("click", () => {
+                        tabs.forEach(tab => tab.classList.remove("active"));
+                        tab.classList.add("active");
+                        contentSections.forEach(section => section.style.display = "none");
+                        if (index === 1) {
+                            document.querySelector("#personal-info-content").style.display = "block";
+                        } else {
+                            contentSections[index] && (contentSections[index].style.display = "block");
+                        }
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

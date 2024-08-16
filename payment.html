@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>付款資訊</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="wrapper">
+            <div class="title">付款資訊</div>
+
+            <div class="container">
+                <div class="payment-form">
+                    <div class="form-group">
+                        <label for="card-number">信用卡號</label>
+                        <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">持卡人姓名</label>
+                        <input type="text" id="card-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">卡片到期日</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="save-info">
+                        <label for="save-info">是否記住付款資訊</label>
+                    </div>
+                    <div class="form-actions">
+                        <button class="cancel-btn">取消</button>
+                        <button class="confirm-btn">確定付款</button>
+                    </div>
+                </div>
+
+                <div id="paymentModal" class="modal">
+                    <div class="modal-content">
+                        <h2>等待支付，請勿離開</h2>
+                        <div class="hourglass-icon">
+                            <img src="image/loading.png" alt="Hourglass">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="paymentFailureModal" class="modal">
+                    <div class="modal-content">
+                        <h2>支付授權失敗</h2>
+                        <div class="warning-icon">
+                            <img src="image/alert.png" alt="Warning">
+                        </div>
+                        <p class="space-little">交易信用卡已被停用</p>
+                        <button class="confirm-btn">確定</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const cancelPaymentBtn = document.querySelector(".cancel-btn");
+    const paymentFailureModal = document.getElementById("paymentFailureModal");
+    const confirmFailureBtn = paymentFailureModal.querySelector(".confirm-btn");
+
+    cancelPaymentBtn.addEventListener("click", function() {
+        paymentFailureModal.style.display = "block";
+    });
+
+    confirmFailureBtn.addEventListener("click", function() {
+        paymentFailureModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target == paymentFailureModal) {
+            paymentFailureModal.style.display = "none";
+        }
+    });
+});
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const confirmPaymentBtn = document.querySelector(".confirm-btn");
+    const modal = document.getElementById("paymentModal");
+
+    confirmPaymentBtn.addEventListener("click", function() {
+        modal.style.display = "block";
+
+
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 5000);
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+</script>
+
+</html>

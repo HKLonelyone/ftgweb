@@ -1,0 +1,267 @@
+.background {
+    background-image: url('image/resetPW_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: 108vh;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 60px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 10px;
+    margin-right: 100px;
+}
+
+.cart-icon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.user-name {
+    font-size: 16px;
+    color: #AB0A0A;
+}
+
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.title {
+    background-image: url('image/resetPW_title_background.png');
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    width: 259px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+    gap: 32px;
+    width: 1140px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="password"] {
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    background-color: #AB0A0A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    margin-top: 10px;
+    width: 200px;
+}
+
+
+.transaction-table {
+    width: 100%;
+}
+
+.table-section {
+    border-bottom: 1px solid #A8A8A8;
+    margin-bottom: 10px;
+}
+
+.table-header {
+    display: flex;
+    padding: 0;
+    align-items: stretch;
+}
+
+.table-row {
+    display: flex;
+    padding: 0px;
+}
+
+.col-1, .col-2, .col-3 {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.table-header .col-1 {
+    background-color: #A58C6D;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    width: 10%;
+    max-width: 10%;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.table-header-option{
+    color: black;
+    font-size: 30px;
+    margin-top: -15px;
+}
+
+.table-header .col-2 {
+    flex: 1;
+    color: #0000ff;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.table-header .col-3 {
+    width: 80px;
+    text-align: right;
+    color: #999;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -12px;
+}
+.table-header .col-2already-refund{
+    color: #0000ff;
+    margin-top: 5px;
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.refund-btn {
+    background-color: #fff;
+    color: #b31b1b;
+    border: 1px solid #b31b1b;
+    padding: 3px 30px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: -3px;
+    white-space: nowrap;
+}
+
+.table-row .col-1 {
+    width: 10%;
+    max-width: 10%;
+    margin-left: -15px;
+    font-weight: bold;
+}
+
+.table-row .col-2 {
+    flex: 1;
+    color: #666;
+    padding-left: 0;
+}
+
+.table-row .col-3 {
+    width: 80px;
+    color: #000;
+    text-align: right;
+}
+.cart-summary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.space{
+    padding-top: 50px;
+}
+
+.total-amount {
+    color: #AB0A0A;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.continue-shopping, .checkout {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.continue-shopping {
+    background-color: white;
+    color: #AB0A0A;
+    border: 1px solid #AB0A0A;
+}
+
+.checkout {
+    background-color: #AB0A0A;
+    color: white;
+}
+
+.continue-shopping:hover, .checkout:hover {
+    opacity: 0.8;
+}

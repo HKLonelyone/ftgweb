@@ -1,0 +1,206 @@
+.background {
+    background-image: url('image/resetPW_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: 108vh;
+}
+
+
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.title {
+    background-image: url('image/resetPW_title_background.png');
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    width: 259px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px;
+    gap: 32px;
+    width: 1140px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.space{
+    padding-top: 50px;
+}
+.payment-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.cancel-btn, .confirm-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+}
+
+.cancel-btn {
+    background-color: #fff;
+    color: #AB0A0A;
+    border: 1px solid #AB0A0A;
+}
+
+.confirm-btn {
+    background-color: #AB0A0A;
+    color: #fff;
+}
+
+.cancel-btn:hover, .confirm-btn:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.modal h2 {
+    color: #AB0A0A;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.hourglass-icon {
+    margin-top: 20px;
+}
+
+.hourglass-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+#paymentFailureModal .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#paymentFailureModal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+.space-little{
+    padding-bottom: 20px;
+}
+
+#paymentFailureModal .modal h2 {
+    color: #AB0A0A;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#paymentFailureModal .warning-icon {
+    margin: 20px 0;
+}
+
+#paymentFailureModal .warning-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+#paymentFailureModal .modal p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#paymentFailureModal .modal .confirm-btn {
+    background-color: #AB0A0A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#paymentFailureModal .modal .confirm-btn:hover {
+    opacity: 0.8;
+}
