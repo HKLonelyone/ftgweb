@@ -3,7 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    height: 108vh;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .navbar {
@@ -44,12 +45,13 @@
 }
 
 .wrapper {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     padding-top: 70px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
 }
 
 .title {
@@ -69,12 +71,14 @@
 
 .container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 10px;
     width: 100%;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .category {
@@ -84,33 +88,28 @@
     border: none;
     font-size: 14px;
     text-align: center;
-    width: 23%;
-    max-width: 23%;
+    width: 5%;
     box-sizing: border-box;
-}
-.container {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    flex-direction: column;
+    margin-left: 24%;
 }
 
-.space{
-    padding-top: 100px;
+
+.space {
+    flex-grow: 1;
+    min-height: 20px;
 }
 
 .row {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-top: 25px;
 }
 
 .flex-section {
     padding-top: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
 }
 
 .subtitle{
@@ -120,7 +119,7 @@
 .flex-column {
     display: flex;
     flex-direction: column;
-    width: 49%;
+    width: 25%;
 }
 
 label {
@@ -139,7 +138,8 @@ input[type="text"] {
 hr {
     border: 0;
     border-top: 1px solid #d1bbae;
-    margin: 20px 0;
+    margin: 20px 24%;
+    width: 52%;
 }
 
 .footer {
@@ -152,10 +152,10 @@ hr {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: auto;
     width: 100%;
     height: 100px;
     box-sizing: border-box;
+    margin-top: auto;
 }
 
 .footer .total-text {
@@ -186,6 +186,59 @@ hr {
 }
 
 
+@media screen and (max-width: 1200px) {
+    .navbar {
+        padding-left: 40px;
+    }
+
+    .right-section {
+        margin-right: 80px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .category {
+        width: 6%;
+        margin-left: 22%;
+    }
+
+    .flex-column {
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        padding-left: 30px;
+    }
+
+    .right-section {
+        margin-right: 60px;
+        gap: 25px;
+    }
+
+    .container {
+        max-width: 900px;
+    }
+
+    .category {
+        width: 7%;
+        margin-left: 20%;
+    }
+
+    .flex-column {
+        width: 30%;
+    }
+
+    .title {
+        font-size: 28px;
+        width: 240px;
+        height: 90px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         padding-left: 20px;
@@ -209,7 +262,13 @@ hr {
     }
 
     .wrapper {
-        padding-top: 20px;
+        height: calc(100vh - 50px);
+        padding-top: 60px;
+    }
+
+    .container {
+        max-height: calc(100vh - 150px);
+        padding: 20px;
     }
 
     .title {
@@ -217,12 +276,6 @@ hr {
         padding: 20px;
         width: 250px;
         height: 70px;
-    }
-
-    .container {
-        padding: 20px;
-        max-width: none;
-        border-radius: 0;
     }
 
     .item-section {
@@ -244,10 +297,11 @@ hr {
 
     .category {
         width: 100%;
-        font-size: 18px;
-        text-align: center;
-        padding-left: 0;
-        margin: 10px 0;
+        margin-left: 0;
+    }
+    hr {
+        margin: 20px 0;
+        width: 100%;
     }
 
     .items-grid {
@@ -354,6 +408,7 @@ hr {
     }
 
     .wrapper {
+        height: calc(100vh - 40px);
         padding-top: 70px;
     }
 
@@ -361,13 +416,27 @@ hr {
         font-size: 24px;
         padding: 20px;
         width: 250px;
-        height: 70px;
+        height: 120px;
+        margin-top: 10px;
+    }
+
+    .flex-section {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .flex-column {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .container {
-        padding: 15px;
+        max-height: calc(100vh - 150px);
+        width: 100vw;
         max-width: none;
-        border-radius: 0;
+        padding: 15px;
+        margin-left: -20px;
+        box-sizing: border-box;
     }
 
     .item-section {
@@ -380,24 +449,10 @@ hr {
         height: 25px;
     }
 
-    .section {
-        flex-direction: column;
-        padding: 0;
-        border-bottom: 1px solid #ddd;
-        margin-bottom: 5px;
-    }
-
-
     .category {
-        background-color: #A58C6D;
-        color: white;
-        padding: 10px;
-        border: none;
-        font-size: 14px;
-        text-align: center;
         width: 23%;
         max-width: 23%;
-        box-sizing: border-box;
+        margin-left: 0;
     }
 
     .items-grid {
@@ -439,53 +494,44 @@ hr {
 
     .footer {
         background-image: url('image/mobile_bottom.png');
-        color: white;
-        background-size: cover;
         background-position: center bottom;
-        background-repeat: no-repeat;
-        padding: 20px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-top: auto;
         width: 400px;
         height: 100px;
-        box-sizing: border-box;
         margin: -50px;
-}
+    }
 
-.space{
-    padding-top: 60px;
-}
+    .space{
+        padding-top: 60px;
+    }
 
-.footer .total-text {
-    font-size: 16px;
-    white-space: nowrap;
-    margin-right: 10px;
-    color: white;
-}
+    .footer .total-text {
+        font-size: 16px;
+        white-space: nowrap;
+        margin-right: 10px;
+        color: white;
+    }
 
-.footer .buttons {
-    display: flex;
-    gap: 5px;
-    flex-wrap: nowrap;
-}
+    .footer .buttons {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
 
-.cancel-btn, .submit-btn {
-    padding: 10px 20px;
-    font-size: 15px;
-    white-space: nowrap;
-}
+    .cancel-btn, .submit-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
 
-.cancel-btn {
-    background-color: #960a1d;
-    color: white;
-    border: 1px solid white;
-}
+    .cancel-btn {
+        background-color: #960a1d;
+        color: white;
+        border: 1px solid white;
+    }
 
-.submit-btn {
-    background-color: white;
-    color: #960a1d;
-    border: 1px solid white;
-}
+    .submit-btn {
+        background-color: white;
+        color: #960a1d;
+        border: 1px solid white;
+    }
 }

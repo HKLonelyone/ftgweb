@@ -3,7 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    height: 108vh;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .navbar {
@@ -44,12 +45,12 @@
 }
 
 .wrapper {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    padding-top: 80px;
+    padding-top: 70px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
 }
 
 .title {
@@ -68,18 +69,15 @@
 }
 
 .container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px 20px 0px 20px;
+    width: 100%;
+    max-width: 1140px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 64px;
-    gap: 32px;
-    width: 1140px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    box-sizing: border-box;
 }
 
 form {
@@ -118,9 +116,26 @@ input[type="password"] {
     width: 200px;
 }
 
+.user-name,
+.table-header .col-1,
+.table-header .col-2,
+.table-header .col-3,
+.table-row .col-1,
+.table-row .col-2,
+.table-row .col-3,
+.total,
+.total-amount,
+.continue-shopping,
+.checkout {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 .transaction-table {
     width: 100%;
+    overflow-x: auto;
 }
 
 .table-section {
@@ -136,7 +151,7 @@ input[type="password"] {
 
 .table-row {
     display: flex;
-    padding: 0px;
+    padding: 5px;
 }
 
 .col-1, .col-2, .col-3 {
@@ -264,4 +279,224 @@ input[type="password"] {
 
 .continue-shopping:hover, .checkout:hover {
     opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    .right-section {
+        margin-right: 50px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .cart-icon {
+        width: 20px;
+    }
+
+    .user-name {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        padding-top: 70px;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .title {
+        font-size: 24px;
+        padding: 20px;
+        width: 250px;
+        height: 70px;
+    }
+
+
+    .container {
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        max-height: calc(100vh - 200px);
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .table-header,
+    .table-row {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    .cart-summary {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .col-1, .col-2, .col-3 {
+        flex-shrink: 0;
+    }
+
+    .action-buttons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .continue-shopping, .checkout {
+        width: auto;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .footer {
+        padding: 10px 20px;
+        font-size: 14px;
+        height: auto;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        background-position: right;
+    }
+
+    .footer .total-text {
+        font-size: 16px;
+        white-space: nowrap;
+        margin-right: 10px;
+        color: white;
+    }
+
+    .footer .buttons {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .cancel-btn, .submit-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .cancel-btn {
+        background-color: #960a1d;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .submit-btn {
+        background-color: white;
+        color: #960a1d;
+        border: 1px solid white;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        padding-top: 70px;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+        margin-right: 50px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .cart-icon {
+        width: 20px;
+    }
+
+    .user-name {
+        font-size: 15px;
+    }
+
+
+    .title {
+        font-size: 24px;
+        padding: 20px;
+        width: 260px;
+        height: 90px;
+    }
+
+
+    .container {
+        max-height: calc(100vh - 150px);
+        width: 100vw;
+        max-width: none;
+        padding: 15px;
+        margin-left: -20px;
+        box-sizing: border-box;
+    }
+
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    .table-header .col-1,
+    .table-row .col-1 {
+        width: 50%;
+        min-width: 100px;
+    }
+
+    .table-header .col-2,
+    .table-row .col-2 {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .table-header .col-3,
+    .table-row .col-3 {
+        width: 25%;
+        min-width: 25px;
+    }
+
+    .cart-summary {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .continue-shopping, .checkout {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .total {
+        font-size: 16px;
+    }
 }

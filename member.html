@@ -22,6 +22,15 @@
         <div class="wrapper">
             <div class="title">會員專區</div>
             <div class="container">
+                <div class="mobile-sidebar">
+                    <ul>
+                        <li class="active">共同資料</li>
+                        <li>個人資料</li>
+                        <li>交易記錄</li>
+                        <li>更改密碼</li>
+                        <li>登出</li>
+                    </ul>
+                </div>
                 <div class="info-section">
                     <div class="sidebar">
                         <ul>
@@ -32,7 +41,12 @@
                             <li>登出</li>
                         </ul>
                     </div>
+
                     <div class="main-content">
+                        <div class="mobile-header">
+                            <button class="mobile-back-button">&larr;</button>
+                            <h2 class="mobile-header-title"></h2>
+                        </div>
                         <div id="common-info-content" class="content-section active">
                             <p class="email">信箱<br>ikjhy234@gmail.com</p>
                             地址
@@ -59,6 +73,7 @@
                                 </div>
                             </div>
                             <button class="confirm-button">確定</button>
+                            <div class="space"></div>
                         </div>
 
                         <div id="personal-info-content" class="content-section">
@@ -113,6 +128,7 @@
                                     <button class="confirm-button">確定</button>
                                     <a href="#" class="delete-link">刪除資料</a>
                                 </div>
+                                <div class="space"></div>
                             </div>
                         </div>
 
@@ -179,6 +195,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="space"></div>
                         </div>
 
                         <div id="change-password-content" class="content-section">
@@ -250,6 +267,16 @@
                             </div>
                         </div>
 
+                    </div>
+                    <div class="space"></div>
+                </div>
+                <div class="mobile-footer">
+                    <div class="mobile-footer-content">
+                        <div class="total-text">小計 | $300</div>
+                        <div class="buttons">
+                            <button class="cancel-btn">取消</button>
+                            <button class="submit-btn">報名</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -425,6 +452,249 @@
                     });
                 });
             });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const desktopSidebar = document.querySelector(".sidebar");
+                const mobileSidebar = document.querySelector(".mobile-sidebar");
+                const mainContent = document.querySelector(".main-content");
+                const mobileTabs = document.querySelectorAll(".mobile-sidebar li");
+                const contentSections = document.querySelectorAll(".content-section");
+
+                function showMobileView() {
+                    desktopSidebar.style.display = "none";
+                    mobileSidebar.style.display = "block";
+                    mainContent.style.display = "none";
+                }
+
+                function showDesktopView() {
+                    desktopSidebar.style.display = "block";
+                    mobileSidebar.style.display = "none";
+                    mainContent.style.display = "block";
+                }
+
+                function showContent(index) {
+                    mobileSidebar.style.display = "none";
+                    mainContent.style.display = "block";
+                    contentSections.forEach(section => section.style.display = "none");
+
+                    if (index === 2) {
+                        document.querySelector("#transaction-content").style.display = "block";
+                    } else if (index === 3) {
+                        document.querySelector("#change-password-content").style.display = "block";
+                    } else {
+                        contentSections[index] && (contentSections[index].style.display = "block");
+                    }
+                }
+
+                mobileTabs.forEach((tab, index) => {
+                    tab.addEventListener("click", () => {
+                        mobileTabs.forEach(t => t.classList.remove("active"));
+                        tab.classList.add("active");
+                        showContent(index);
+                    });
+                });
+
+                const backButton = document.createElement("button");
+                backButton.textContent = "返回";
+                backButton.classList.add("back-button");
+                backButton.style.display = "none";
+                document.querySelector(".wrapper").insertBefore(backButton, document.querySelector(".title"));
+
+                backButton.addEventListener("click", () => {
+                    mainContent.style.display = "none";
+                    mobileSidebar.style.display = "block";
+                    backButton.style.display = "none";
+                });
+
+                function handleResize() {
+                    if (window.innerWidth <= 768) {
+                        showMobileView();
+                    } else {
+                        showDesktopView();
+                    }
+                }
+
+                handleResize();
+
+                window.addEventListener("resize", handleResize);
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+    const desktopSidebar = document.querySelector(".sidebar");
+    const mobileSidebar = document.querySelector(".mobile-sidebar");
+    const mainContent = document.querySelector(".main-content");
+    const mobileTabs = document.querySelectorAll(".mobile-sidebar li");
+    const contentSections = document.querySelectorAll(".content-section");
+    const mobileHeader = document.querySelector('.mobile-header');
+    const mobileHeaderTitle = document.querySelector('.mobile-header-title');
+    const mobileBackButton = document.querySelector('.mobile-back-button');
+    const mobileFooter = document.querySelector(".mobile-footer");
+    const mobileFooterContent = document.querySelector(".mobile-footer-content");
+
+    function showMobileView() {
+        desktopSidebar.style.display = "none";
+        mobileSidebar.style.display = "block";
+        mainContent.style.display = "none";
+        mobileHeader.style.display = "none";
+        mobileFooter.style.display = "flex";
+        mobileFooterContent.style.display = "flex";
+    }
+
+    function showDesktopView() {
+        desktopSidebar.style.display = "block";
+        mobileSidebar.style.display = "none";
+        mainContent.style.display = "block";
+        mobileHeader.style.display = "none";
+        mobileFooter.style.display = "none";
+        mobileFooterContent.style.display = "none";
+    }
+
+    function showContent(index) {
+        mobileSidebar.style.display = "none";
+        mainContent.style.display = "block";
+        mobileHeader.style.display = "flex";
+        mobileFooter.style.display = "flex";
+        mobileFooterContent.style.display = "none";
+        contentSections.forEach(section => section.style.display = "none");
+
+        let title = "";
+        if (index === 0) {
+            title = "共同資料";
+        } else if (index === 1) {
+            title = "個人資料";
+        } else if (index === 2) {
+            title = "交易記錄";
+        } else if (index === 3) {
+            title = "更改密碼";
+        }
+        mobileHeaderTitle.textContent = title;
+
+        if (index === 2) {
+            document.querySelector("#transaction-content").style.display = "block";
+        } else if (index === 3) {
+            document.querySelector("#change-password-content").style.display = "block";
+        } else {
+            contentSections[index] && (contentSections[index].style.display = "block");
+        }
+    }
+
+    mobileTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+            mobileTabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            showContent(index);
+        });
+    });
+
+    mobileBackButton.addEventListener("click", () => {
+        mainContent.style.display = "none";
+        mobileSidebar.style.display = "block";
+        mobileHeader.style.display = "none";
+        mobileFooter.style.display = "flex";
+        mobileFooterContent.style.display = "flex";
+    });
+
+    function handleResize() {
+        if (window.innerWidth <= 768) {
+            showMobileView();
+        } else {
+            showDesktopView();
+        }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    const changePasswordConfirmModal = document.getElementById("changePasswordConfirmModal");
+    const changePasswordButton = document.querySelector("#change-password-content .confirm-button");
+    const cancelChangePasswordButton = document.getElementById("cancelChangePassword");
+    const confirmChangePasswordButton = document.getElementById("confirmChangePassword");
+
+    if (changePasswordButton) {
+        changePasswordButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            changePasswordConfirmModal.style.display = "block";
+        });
+    }
+
+    cancelChangePasswordButton.addEventListener("click", function () {
+        changePasswordConfirmModal.style.display = "none";
+    });
+
+    confirmChangePasswordButton.addEventListener("click", function () {
+        console.log("密碼修改確認");
+        changePasswordConfirmModal.style.display = "none";
+    });
+
+    // 處理成功模態框
+    const successModal = document.getElementById("successModal");
+    const successConfirmButton = document.getElementById("successConfirm");
+    const commonInfoConfirmButton = document.querySelector("#common-info-content .confirm-button");
+    const personalInfoConfirmButton = document.querySelector("#personal-info-content .confirm-button");
+
+    function showSuccessModal() {
+        console.log("數據已提交");
+        successModal.style.display = "block";
+    }
+
+    if (commonInfoConfirmButton) {
+        commonInfoConfirmButton.addEventListener("click", showSuccessModal);
+    }
+
+    if (personalInfoConfirmButton) {
+        personalInfoConfirmButton.addEventListener("click", showSuccessModal);
+    }
+
+    successConfirmButton.addEventListener("click", function () {
+        successModal.style.display = "none";
+    });
+
+    const logoutButton = document.querySelector(".sidebar li:last-child");
+    const logoutModal = document.getElementById("logoutModal");
+    const cancelLogoutButton = document.getElementById("cancelLogout");
+    const confirmLogoutButton = document.getElementById("confirmLogout");
+
+    logoutButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        logoutModal.style.display = "block";
+    });
+
+    cancelLogoutButton.addEventListener("click", function () {
+        logoutModal.style.display = "none";
+    });
+
+    confirmLogoutButton.addEventListener("click", function () {
+        console.log("登出確認");
+        logoutModal.style.display = "none";
+    });
+
+    const refundButtons = document.querySelectorAll(".refund-btn");
+    const refundModal = document.getElementById("refundModal");
+    const cancelRefundButton = document.getElementById("cancelRefund");
+    const confirmRefundButton = document.getElementById("confirmRefund");
+
+    refundButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            refundModal.style.display = "block";
+        });
+    });
+
+    cancelRefundButton.addEventListener("click", function () {
+        refundModal.style.display = "none";
+    });
+
+    confirmRefundButton.addEventListener("click", function () {
+        console.log("退單確認");
+        refundModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    });
+});
         </script>
 </body>
 
