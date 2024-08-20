@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center bottom;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .navbar {
@@ -49,19 +49,11 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-top: 70px;
+    padding-top: 0px;
     height: calc(100vh - 60px);
     overflow-y: auto;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    padding-top: 70px;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+    padding-top: 80px;
+    gap: 20px;
 }
 
 .title {
@@ -76,18 +68,17 @@
     font-size: 30px;
     width: 259px;
     height: 100px;
-    margin-bottom: 20px;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px 20px 0px 20px;
     width: 100%;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     max-height: calc(100vh - 200px);
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -757,6 +748,14 @@ input[type="date"].form-control {
 .mobile-sidebar,
 .mobile-footer {
     display: none;
+}
+
+@media (min-width: 1024px){
+
+}
+
+@media (max-width: 1023px) and (min-width: 769px){
+
 }
 
 @media screen and (max-width: 768px) {

@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center bottom;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .navbar {
@@ -499,18 +499,6 @@ select {
         font-size: 14px;
         width: 20%;
         padding: 10px;
-    }
-
-    .category {
-        background-color: #A58C6D;
-        color: white;
-        padding: 10px;
-        border: none;
-        font-size: 14px;
-        text-align: center;
-        width: 10%;
-        max-width: 10%;
-        box-sizing: border-box;
     }
 
     .selector{

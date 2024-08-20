@@ -1,3 +1,20 @@
+.background {
+    background-image: url('image/resetPW_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: calc(100vh - 60px);
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar {
     width: 100%;
     background-color: #FFFFFF;
@@ -35,21 +52,6 @@
     color: #AB0A0A;
 }
 
-.background {
-    background-image: url('image/resetPW_background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-
 .success-box {
     display: flex;
     flex-direction: column;
@@ -64,7 +66,7 @@
 }
 
 .success-title {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     color: #940F0F;
     margin-bottom: 20px;
@@ -72,17 +74,18 @@
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     margin-bottom: 20px;
     object-fit: contain;
 }
 
 .success-message {
     font-size: 16px;
-    font-weight: 500;
     color: #4D4D4D;
     margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .button-container {
@@ -108,18 +111,87 @@
     border: 1px solid #AB0A0A;
 }
 
-@media (max-width: 768px) {
-    .background {
-        padding-top: 60px;
-    }
-
+@media (min-width: 1024px) {
     .success-box {
-        padding: 30px;
-        max-width: 95%;
+        max-width: 600px;
+        margin-top: -30%;
     }
 
     .success-title {
-        font-size: 24px;
+        font-size: 25px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .success-message {
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 12px 24px;
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .success-box {
+        max-width: 80%;
+        margin-top: -40%;
+    }
+
+    .success-title {
+        font-size: 25px;
+    }
+
+    .success-message {
+        font-size: 15px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar {
+        padding-left: 30px;
+    }
+
+    .right-section {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .background {
+        background-position: left bottom;
+    }
+
+    .navbar {
+        padding-left: 25px;
+    }
+
+    .right-section {
+        margin-right: 40px;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .success-box {
+        padding: 20px;
+        margin-top: -50%;
+    }
+
+    .success-title {
+        font-size: 20px;
+        padding-top: 20px;
     }
 
     .icon {
@@ -132,9 +204,9 @@
     }
 
     .submit-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-        width: 120px;
+        font-size: 12px;
+        padding: 6px 12px;
+        width: 100px;
     }
 }
 
@@ -162,16 +234,12 @@
     }
 
     .background {
-        background-position: left bottom;
-    }
-
-    .success-box {
-        padding: 20px;
-        margin-top: -90%;
+        background-position: calc(50% - -180px) bottom;
     }
 
     .success-title {
-        font-size: 20px;
+        font-size: 18px;
+        padding-top: 20px;
     }
 
     .icon {
@@ -183,9 +251,14 @@
         font-size: 12px;
     }
 
+    .success-box {
+        padding: 20px;
+        margin-top: -90%;
+    }
+
     .submit-btn {
-        font-size: 12px;
-        padding: 6px 12px;
-        width: 100px;
+        font-size: 10px;
+        padding: 5px 10px;
+        width: 80px;
     }
 }

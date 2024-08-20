@@ -4,17 +4,19 @@
     background-size: cover;
     background-position: center bottom;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    padding-top: 0px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding-top: 80px;
     gap: 20px;
-    min-height: 100vh;
-    margin-top: -10%;
 }
 
 .title {
@@ -26,13 +28,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
     width: 259px;
     height: 100px;
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
 }
 
 .container {
@@ -128,66 +126,214 @@ input[type="password"] {
     overflow-y: auto;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 32px 16px;
-        gap: 16px;
-        width: 90%;
+@media (min-width: 1024px) {
+    .background {
+        overflow: hidden;
     }
 
-    .title {
-        font-size: 16px;
-        width: 200px;
-        height: 80px;
+    .success-box {
+        margin-top: -20%;
     }
 
-    input[type="password"] {
-        height: 35px;
-        font-size: 14px;
+    .success-title {
+        font-size: 25px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .success-message {
+        font-size: 15px;
     }
 
     .submit-btn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 24px 12px;
-        gap: 12px;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .wrapper {
-        margin-top: -30%;
+        font-size: 15px;
+        padding: 12px 24px;
+        width: 150px;
     }
 
     .title {
-        font-size: 14px;
-        width: 180px;
-        height: 70px;
-        margin: 0 auto;
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
     }
 
-    input[type="password"] {
-        height: 20px;
-        font-size: 12px;
-        width: 90%;
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10%;
+    }
+}
+
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20%;
+    }
+
+    .success-box {
+        margin-top: -30%;
+    }
+
+    .success-title {
+        font-size: 25px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar {
+        padding-left: 30px;
+    }
+
+    .right-section {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20%;
+    }
+
+    .success-box {
+        margin-top: -30%;
+    }
+
+    .success-title {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .success-message {
+        font-size: 14px;
     }
 
     .submit-btn {
         font-size: 12px;
         padding: 6px 12px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 150px);
+        width: 100vw;
+        max-width: none;
+        padding: 15px;
+        margin-left: -20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        padding-top: 70px;
     }
     .background {
         background-position: calc(50% - -180px) bottom;
     }
     .success-box {
-        padding: 20px;
-        width: 90%;
-        margin: 0 auto;
         margin-top: -50%;
+    }
+
+    .success-title {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .success-message {
+        font-size: 12px;
+    }
+
+    .submit-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+        width: 80px;
     }
 }
