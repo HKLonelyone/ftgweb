@@ -8,8 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow: auto;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .success-box {
@@ -19,11 +21,10 @@
     text-align: center;
     padding: 50px;
     font-family: 'Noto Sans TC';
-    border-radius: 10px;
     max-width: 90%;
     max-height: 90vh;
     overflow-y: auto;
-    margin-top: -400px;
+    margin-top: 10vh;
 }
 
 .success-title {
@@ -58,10 +59,37 @@
     width: 150px;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1024px) {
     .success-box {
-        padding: 45px;
-        margin-top: -360px;
+        max-width: 600px;
+        padding: 60px;
+        margin-top: 5vh;
+    }
+
+    .success-title {
+        font-size: 36px;
+    }
+
+    .icon {
+        width: 160px;
+        height: 160px;
+    }
+
+    .success-message {
+        font-size: 20px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+        padding: 12px 24px;
+        width: 180px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .success-box {
+        max-width: 80%;
+        margin-top: 5vh;
     }
 
     .success-title {
@@ -72,53 +100,15 @@
         width: 120px;
         height: 120px;
     }
-
-    .success-message {
-        font-size: 17px;
-    }
-
-    .submit-btn {
-        font-size: 15px;
-        width: 140px;
-    }
-}
-
-@media (max-width: 992px) {
-    .success-box {
-        padding: 40px;
-        margin-top: -320px;
-    }
-
-    .success-title {
-        font-size: 26px;
-    }
-
-    .icon {
-        width: 110px;
-        height: 110px;
-    }
-
-    .success-message {
-        font-size: 16px;
-    }
-
-    .submit-btn {
-        font-size: 14px;
-        width: 130px;
-    }
 }
 
 @media (max-width: 768px) {
     .background {
-        background-image: url('image/resetPW_background.png');
-        background-repeat: no-repeat;
-        background-size: cover;
         background-position: calc(50% - -200px) bottom;
     }
-
     .success-box {
         padding: 30px;
-        margin-top: -280px;
+        margin-top: 8vh;
     }
 
     .success-title {
@@ -141,36 +131,10 @@
     }
 }
 
-@media (max-width: 576px) {
-    .success-box {
-        padding: 25px;
-        margin-top: -240px;
-    }
-
-    .success-title {
-        font-size: 22px;
-    }
-
-    .icon {
-        width: 90px;
-        height: 90px;
-    }
-
-    .success-message {
-        font-size: 15px;
-    }
-
-    .submit-btn {
-        font-size: 13px;
-        padding: 7px 14px;
-        width: 110px;
-    }
-}
-
 @media (max-width: 480px) {
     .success-box {
         padding: 20px;
-        margin-top: -200px;
+        margin-top: 5vh;
     }
 
     .success-title {
