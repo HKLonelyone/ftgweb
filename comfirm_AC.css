@@ -67,22 +67,22 @@
     }
 
     .success-title {
-        font-size: 36px;
+        font-size: 25px;
     }
 
     .icon {
-        width: 160px;
-        height: 160px;
+        width: 100px;
+        height: 100px;
     }
 
     .success-message {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .submit-btn {
-        font-size: 18px;
+        font-size: 15px;
         padding: 12px 24px;
-        width: 180px;
+        width: 150px;
     }
 }
 
@@ -93,12 +93,12 @@
     }
 
     .success-title {
-        font-size: 28px;
+        font-size: 25px;
     }
 
     .icon {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -106,6 +106,7 @@
     .background {
         background-position: calc(50% - -200px) bottom;
     }
+
     .success-box {
         padding: 30px;
         margin-top: 8vh;

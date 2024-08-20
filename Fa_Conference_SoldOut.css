@@ -49,9 +49,11 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-top: 70px;
+    padding-top: 0px;
     height: calc(100vh - 60px);
     overflow-y: auto;
+    padding-top: 80px;
+    gap: 20px;
 }
 
 .title {
@@ -66,18 +68,17 @@
     font-size: 30px;
     width: 259px;
     height: 100px;
-    margin-bottom: 20px;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px 20px 0px 20px;
     width: 100%;
     max-width: 1400px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     max-height: calc(100vh - 200px);
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -184,6 +185,80 @@
 .submit-btn {
     background-color: white;
     color: #960a1d;
+}
+
+@media (min-width: 1024px){
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    select {
+        font-size: 15px;
+        width: 25%;
+        padding: 10px;
+    }
+
+    .section_title {
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        font-size: 18px;
+        padding-top: 2%;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 769px){
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+    }
 }
 
 @media screen and (max-width: 768px) {
