@@ -3,16 +3,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    height: calc(100vh - 60px);
-    width: 100%;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .navbar {
@@ -61,8 +60,8 @@
     font-family: 'Noto Sans TC';
     max-width: 90%;
     max-height: 90vh;
-    margin-top: -30%;
     overflow-y: auto;
+    margin-top: 10vh;
 }
 
 .success-title {
@@ -100,8 +99,9 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
+    align-self: center;
+    margin-top: 10px;
     width: 150px;
-    transition: background-color 0.3s;
 }
 
 .submit-btn:nth-child(2) {
@@ -113,7 +113,8 @@
 @media (min-width: 1024px) {
     .success-box {
         max-width: 600px;
-        margin-top: -30%;
+        padding: 60px;
+        margin-top: 5vh;
     }
 
     .success-title {
@@ -140,7 +141,7 @@
 @media (max-width: 1023px) and (min-width: 769px) {
     .success-box {
         max-width: 80%;
-        margin-top: -40%;
+        margin-top: 5vh;
     }
 
     .success-title {
@@ -180,28 +181,27 @@
     }
 
     .success-box {
-        padding: 20px;
-        margin-top: -50%;
+        padding: 30px;
+        margin-top: 8vh;
     }
 
     .success-title {
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 24px;
     }
 
     .icon {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .success-message {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .submit-btn {
-        font-size: 12px;
-        padding: 6px 12px;
-        width: 100px;
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 120px;
     }
 }
 
@@ -238,22 +238,22 @@
     }
 
     .icon {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 
     .success-message {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .success-box {
         padding: 20px;
-        margin-top: -90%;
+        margin-top: 5vh;
     }
 
     .submit-btn {
-        font-size: 10px;
-        padding: 5px 10px;
-        width: 80px;
+        font-size: 12px;
+        padding: 6px 12px;
+        width: 100px;
     }
 }

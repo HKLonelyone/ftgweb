@@ -25,7 +25,7 @@
 .background-section {
     background-image: url('image/background.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     width: 100%;
     height: calc(100vh - -200px);
     position: fixed;
@@ -35,17 +35,16 @@
 
 .image-buttons {
     position: absolute;
-    top: 120px;
-    right: 350px;
+    top: 90px;
+    right: 400px;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    flex-direction: row;
+    gap: 50px;
 }
 
 .button {
-    width: 120px;
-    height: 350px;
+    width: 100px;
+    height: 300px;
     cursor: pointer;
 }
 
@@ -199,8 +198,28 @@
     cursor: pointer;
 }
 
+.form-row .additional-member {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+}
+
+
+.member-number {
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.close-member {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: px;
+}
+
 #registerModal .modal-content {
     margin: 5% auto;
+    width: 1400px;
 }
 
 #registerModal h2 {
@@ -210,12 +229,19 @@
 
 #registerModal input,
 #registerModal select {
-    width: calc(100% - 20px);
-    /* 減去padding */
+    width: calc(100% - 0px);
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     box-sizing: border-box;
+}
+
+#registerModal .form-group {
+    margin-bottom: 15px;
+}
+
+#registerModal .form-group select {
+    width: 100px;
 }
 
 #registerModal .form-row {
@@ -225,23 +251,6 @@
     margin-bottom: 15px;
 }
 
-#registerModal .form-row>div {
-    flex: 1;
-}
-
-#registerModal .form-row .half-width {
-    flex: 1;
-}
-
-#registerModal .form-row .full-width {
-    flex: 2;
-}
-
-#registerModal .form-row .address-part>div {
-    flex: 0 1 auto;
-    display: flex;
-    flex-direction: column;
-}
 
 #registerModal .form-actions {
     display: flex;
@@ -257,52 +266,153 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    margin: 0;
 }
 
 #registerModal .buttons-row {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 
-#registerModal .form-row .secondary-div1 {
+#registerModal .buttons-left {
+    display: flex;
+    align-items: center;
+}
+
+#registerModal .buttons-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#registerModal .secondary-div1 {
     background-color: #A58C6D;
     color: white;
     padding: 10px;
     border: none;
     font-size: 14px;
     text-align: center;
-    width: 23%;
-    max-width: 23%;
+    width: 15%;
+    max-width: 13%;
     box-sizing: border-box;
+    white-space: nowrap;
+}
+
+#registerModal .secondary-div2 {
+    background-color: #A58C6D;
+    color: white;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    max-width: 15%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    height: 30px;
 }
 
 #registerModal .buttons-row button {
     width: auto;
 }
 
-#registerModal .form-row .address-part>div {
-    flex: 0 1 auto;
+#registerModal label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#registerModal input[type="text"],
+#registerModal input[type="date"],
+#registerModal select {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#registerModal .form-row.address-part {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#registerModal .address-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#registerModal .postcode-item {
+    width: 100px;
+}
+
+#registerModal .city-item,
+#registerModal .district-item {
+    width: 100px;
+}
+
+#registerModal .address-full {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 200px;
+}
+
+#registerModal .address-item input,
+#registerModal .address-item select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#registerModal .wider-form-row {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#registerModal .wider-form-row .half-width {
+    width: 48%;
+}
+
+#registerModal .wider-form-row input[type="text"],
+#registerModal .wider-form-row input[type="date"],
+#registerModal .wider-form-row input[type="tel"],
+#registerModal .wider-form-row select {
+    width: 100%;
+}
+
+#registerModal .form-row .half-width input[type="text"],
+#registerModal .form-row .half-width input[type="tel"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#registerModal .form-row .half-width {
     display: flex;
     flex-direction: column;
 }
 
-#registerModal .form-row .address-part>div:nth-child(1) {
-    width: 10%;
+#registerModal .form-row .half-width label {
+    margin-bottom: 5px;
 }
 
-#registerModal .form-row .address-part>div:nth-child(2) {
-    width: 10%;
+#registerModal .form-row>div {
+    text-align: left;
+    margin-bottom: 15px;
 }
 
-#registerModal .form-row .address-part>div:nth-child(3) {
-    width: 10%;
+#registerModal .form-row label {
+    margin-bottom: 10px;
 }
 
-#registerModal .form-row .address-part>div:nth-child(4) {
-    width: 70%;
-}
+
+
 
 #forgotPasswordModal .modal-content {
     margin: 10% auto;
@@ -361,46 +471,38 @@
     cursor: pointer;
 }
 
-#registerModal label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-#registerModal input[type="text"],
-#registerModal input[type="date"],
-#registerModal select {
-    display: block;
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    text-align: left;
-}
-
-#registerModal .form-row>div {
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-
-#registerModal .form-row label {
-    margin-bottom: 10px;
-}
-
 #successPopup .button:hover {
     background-color: #a00000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px){
+    .background-section {
+        height: calc(100vh - 60px);
+        overflow-y: hidden;
+    }
+
+    .image-buttons {
+        position: absolute;
+        top: 30%;
+        right: 80px;
+        transform: translateY(-50%);
+    }
+
+    .button {
+        width: 80px;
+        height: 250px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
     .navbar {
-        height: 50px;
         padding-left: 10px;
+        height: 60px;
     }
 
     .logo {
-        height: 50px;
+        height: 40px;
     }
 
     .background-section {
@@ -408,83 +510,16 @@
         background-size: cover;
         background-position: center center;
         width: 100%;
-        height: calc(100vh - 50px);
-        top: 50px;
-    }
-
-    .image-buttons {
-        right: 20px;
-        top: 80px;
-        gap: 20px;
-        flex-direction: row;
-    }
-
-    .button {
-        width: 100px;
-        height: 250px;
-    }
-
-    .modal-content {
-        width: 90%;
-        margin: 10% auto;
-        padding: 20px;
-    }
-
-    #registerModal .form-row {
-        flex-direction: column;
-        gap: 3px;
-    }
-
-    #registerModal .form-row>div {
-        margin-bottom: 10px;
-        gap: 3px;
-    }
-
-    #registerModal .form-row .address-part>div {
-        width: 100%;
-        gap: 3px;
-    }
-
-    .form-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .modal-content button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    #registerModal .buttons-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #registerModal .buttons-row button {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        height: 40px;
-        padding-left: 10px;
-    }
-
-    .background-section {
         height: calc(100vh - 40px);
-        top: 40px;
-    }
-
-    .logo {
-        height: 40px;
+        position: fixed;
+        top: 60px;
+        overflow-y: auto;
     }
 
     .image-buttons {
-        right: 40px;
-        top: 200px;
-        gap: 10px;
+        right: 50px;
+        top: 350px;
+        gap: 15px;
     }
 
     .button {
@@ -526,5 +561,103 @@
     #registerModal .buttons-row button {
         width: 100%;
         margin: 5px 0;
+    }
+
+    #registerModal .modal-content {
+        margin: 5% auto;
+        width: 100%;
+    }
+    #registerModal .modal-content {
+        margin: 5% auto;
+        width: 90%;
+        padding: 20px;
+    }
+
+    #registerModal h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    #registerModal .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #registerModal .form-row > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #registerModal input[type="text"],
+    #registerModal input[type="date"],
+    #registerModal input[type="tel"],
+    #registerModal select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    #registerModal .form-row .half-width {
+        width: 100%;
+    }
+
+    #registerModal .form-row.address-part {
+        flex-wrap: wrap;
+    }
+
+    #registerModal .address-item,
+    #registerModal .postcode-item,
+    #registerModal .address-full {
+        width: 100%;
+    }
+    #registerModal .form-row.address-part {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #registerModal .city-item,
+    #registerModal .district-item {
+        width: 50%;
+        flex: 1;
+    }
+
+    #registerModal .city-item select,
+    #registerModal .district-item select {
+        width: 100%;
+    }
+
+    #registerModal label {
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    #registerModal .buttons-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #registerModal .buttons-row button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #registerModal .secondary-div1,
+    #registerModal .secondary-div2 {
+        width: 20%;
+        max-width: 20%;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    #registerModal .form-actions {
+        flex-direction: column;
+    }
+
+    #registerModal .form-actions button {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }

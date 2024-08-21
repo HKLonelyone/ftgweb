@@ -4,18 +4,19 @@
     background-size: cover;
     background-position: center bottom;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    padding-top: 0px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    padding-top: 80px;
     gap: 20px;
-    min-height: 100vh;
-    margin-top: -10%;
-    padding-top: 5%;
 }
 
 .title {
@@ -27,13 +28,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
     width: 259px;
     height: 100px;
-    font-family: 'Noto Sans TC';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
 }
 
 .container {
@@ -208,22 +205,93 @@
     opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 1024px){
+    .background {
+        overflow: hidden;
+    }
+
     .title {
-        font-size: 16px;
-        width: 200px;
+        font-size: 25px;
+        width: 210px;
         height: 80px;
+        margin-bottom: 20px;
     }
 
     .container {
-        padding: 32px 16px;
-        gap: 16px;
-        width: 90%;
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
     }
 
-    .payment-form {
-        max-width: 90%;
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10%;
     }
+}
+
+@media (max-width: 1023px){
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
+    }
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20%;
+    }
+
 
     .form-group label {
         font-size: 14px;
@@ -239,12 +307,12 @@
     }
 
     .modal-content {
-        width: 80%;
+        width: 50%;
         padding: 40px;
     }
 
     #paymentFailureModal .modal-content {
-        width: 80%;
+        width: 50%;
         padding: 20px;
     }
 
@@ -259,36 +327,48 @@
 }
 
 @media screen and (max-width: 480px) {
-    .container {
-        padding: 24px 12px;
-        gap: 12px;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .wrapper {
-        margin-top: -30%;
+    .background {
+        overflow: hidden;
     }
 
     .title {
-        font-size: 14px;
-        width: 180px;
-        height: 70px;
-        margin: 0 auto;
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 150px);
+        width: 100vw;
+        max-width: none;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        padding-top: 70px;
+    }
+    .background {
+        background-position: calc(50% - -180px) bottom;
     }
 
     .payment-form {
-        max-width: 100%;
+        max-width: 50%;
     }
 
     .form-actions {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     .cancel-btn, .confirm-btn {
         width: 80%;
         margin-bottom: 10px;
+        font-size: 14px;
+        white-space: nowrap;
     }
 
     .modal-content {

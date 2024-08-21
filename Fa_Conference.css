@@ -183,7 +183,7 @@
     }
 }
 
-@media (max-width: 1023px) and (min-width: 769px){
+@media (max-width: 1023px){
     .background {
         overflow: hidden;
     }
@@ -228,6 +228,11 @@
         padding: 10px 20px;
         cursor: pointer;
         font-size: 15px;
+    }
+
+    .footer {
+        padding: 22px;
+        display: flex;
     }
 }
 
@@ -286,14 +291,6 @@
         background-color: #991414;
     }
 
-    .footer {
-        padding: 10px 20px;
-        font-size: 14px;
-        height: auto;
-        justify-content: flex-end;
-        flex-wrap: nowrap;
-        background-position: right;
-    }
 
     .footer .total-text {
         font-size: 16px;
@@ -414,6 +411,65 @@
 
     .cancel-btn, .submit-btn {
         padding: 10px 20px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .cancel-btn {
+        background-color: #960a1d;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .submit-btn {
+        background-color: white;
+        color: #960a1d;
+        border: 1px solid white;
+    }
+}
+
+@media (max-width: 420px){
+    .container {
+        overflow-x: hidden;
+    }
+    .footer {
+        width: 108%;
+    }
+
+    .select-selected {
+        width: 50%;
+    }
+
+    .total-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-left: -250px;
+    }
+
+    .total-price {
+        color: red;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .footer .total-text {
+        font-size: 14px;
+        white-space: nowrap;
+        margin-right: 10px;
+        color: white;
+    }
+
+    .footer .buttons {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+        margin-right: -45px;
+    }
+
+    .cancel-btn, .submit-btn {
+        padding: 8px 18px;
         font-size: 15px;
         white-space: nowrap;
     }

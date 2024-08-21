@@ -172,14 +172,14 @@
 }
 
 .cancel-btn {
-    background-color: #960a1d;
+    background-color: #8E1212;
     color: white;
     border: 1px solid white;
 }
 
 .submit-btn {
     background-color: white;
-    color: #960a1d;
+    color: #8E1212;
 }
 
 @media (min-width: 1024px){
@@ -226,7 +226,7 @@
     }
 }
 
-@media (max-width: 1023px) and (min-width: 769px){
+@media (max-width: 1023px){
     .background {
         overflow: hidden;
     }
@@ -244,6 +244,11 @@
         transform-origin: center center;
         transition: transform 0.3s ease;
         margin-top: -20px;
+    }
+
+    .footer {
+        padding: 22px;
+        display: flex;
     }
 
     .wrapper {
@@ -347,15 +352,6 @@
         width: 100%;
     }
 
-    .footer {
-        padding: 10px 20px;
-        font-size: 14px;
-        height: auto;
-        justify-content: flex-end;
-        flex-wrap: nowrap;
-        background-position: right;
-    }
-
     .footer .total-text {
         font-size: 16px;
         white-space: nowrap;
@@ -376,14 +372,14 @@
     }
 
     .cancel-btn {
-        background-color: #960a1d;
+        background-color: #8E1212;
         color: white;
         border: 1px solid white;
     }
 
     .submit-btn {
         background-color: white;
-        color: #960a1d;
+        color: #8E1212;
         border: 1px solid white;
     }
 }
@@ -521,6 +517,65 @@
 
     .cancel-btn, .submit-btn {
         padding: 10px 20px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .cancel-btn {
+        background-color: #8E1212;
+        color: white;
+        border: 1px solid white;
+    }
+
+    .submit-btn {
+        background-color: white;
+        color: #8E1212;
+        border: 1px solid white;
+    }
+}
+
+@media (max-width: 420px){
+    .container {
+        overflow-x: hidden;
+    }
+    .footer {
+        width: 108%;
+    }
+
+    .select-selected {
+        width: 50%;
+    }
+
+    .total-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-left: -250px;
+    }
+
+    .total-price {
+        color: red;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .footer .total-text {
+        font-size: 14px;
+        white-space: nowrap;
+        margin-right: 10px;
+        color: white;
+    }
+
+    .footer .buttons {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+        margin-right: -45px;
+    }
+
+    .cancel-btn, .submit-btn {
+        padding: 8px 18px;
         font-size: 15px;
         white-space: nowrap;
     }

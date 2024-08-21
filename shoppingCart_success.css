@@ -1,3 +1,19 @@
+.background {
+    background-image: url('image/resetPW_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .navbar {
     width: 100%;
     background-color: #FFFFFF;
@@ -35,21 +51,6 @@
     color: #AB0A0A;
 }
 
-.background {
-    background-image: url('image/resetPW_background.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-
 .success-box {
     display: flex;
     flex-direction: column;
@@ -59,30 +60,30 @@
     font-family: 'Noto Sans TC';
     max-width: 90%;
     max-height: 90vh;
-    margin-top: -30%;
     overflow-y: auto;
+    margin-top: 10vh;
 }
 
 .success-title {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     color: #6C4F2B;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     margin-bottom: 20px;
     object-fit: contain;
 }
 
 .success-message {
     font-size: 16px;
-    font-weight: 500;
     color: #4D4D4D;
     margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .button-container {
@@ -98,8 +99,9 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
+    align-self: center;
+    margin-top: 10px;
     width: 150px;
-    transition: background-color 0.3s;
 }
 
 .submit-btn:nth-child(2) {
@@ -108,14 +110,79 @@
     border: 1px solid #AB0A0A;
 }
 
+@media (min-width: 1024px) {
+    .success-box {
+        max-width: 600px;
+        padding: 60px;
+        margin-top: 5vh;
+    }
+
+    .success-title {
+        font-size: 25px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .success-message {
+        font-size: 15px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 12px 24px;
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 1023px) and (min-width: 769px) {
+    .success-box {
+        max-width: 80%;
+        margin-top: 5vh;
+    }
+
+    .success-title {
+        font-size: 25px;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .navbar {
+        padding-left: 30px;
+    }
+
+    .right-section {
+        margin-right: 60px;
+    }
+}
+
 @media (max-width: 768px) {
     .background {
-        padding-top: 60px;
+        background-position: left bottom;
+    }
+
+    .navbar {
+        padding-left: 25px;
+    }
+
+    .right-section {
+        margin-right: 40px;
+        gap: 20px;
+    }
+
+    .logo {
+        height: 50px;
     }
 
     .success-box {
         padding: 30px;
-        max-width: 95%;
+        margin-top: 8vh;
     }
 
     .success-title {
@@ -123,12 +190,12 @@
     }
 
     .icon {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .success-message {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .submit-btn {
@@ -162,25 +229,26 @@
     }
 
     .background {
-        background-position: left bottom;
+        background-position: calc(50% - -180px) bottom;
+    }
+
+    .success-title {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .success-message {
+        font-size: 14px;
     }
 
     .success-box {
         padding: 20px;
-        margin-top: -90%;
-    }
-
-    .success-title {
-        font-size: 20px;
-    }
-
-    .icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .success-message {
-        font-size: 12px;
+        margin-top: 5vh;
     }
 
     .submit-btn {

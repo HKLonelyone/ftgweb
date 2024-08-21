@@ -54,40 +54,40 @@
             <span class="close">&times;</span>
             <h2>會員註冊</h2>
             <form>
-                <div class="form-row">
+                <div class="form-group">
                     <label for="email">信箱</label>
-                    <input type="email" id="email" placeholder="信箱*" required>
+                    <input type="email" id="email" class="form-control" placeholder="請輸入您的信箱">
                 </div>
                 <div class="form-row">
                     <label for="password">密碼</label>
                     <input type="password" id="password" placeholder="密碼*" required>
                 </div>
                 <div class="form-row address-part">
-                    <div>
+                    <div class="address-item postcode-item">
                         <label for="postcode">郵寄區號*</label>
                         <input type="text" id="postcode" placeholder="郵寄區號*" required>
                     </div>
-                    <div>
-                        <label for="postcode" class="hide">郵寄區號*</label>
+                    <div class="address-item city-item">
+                        <label for="city" class="hide">縣市*</label>
                         <select id="city" required>
                             <option value="">縣市</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="postcode" class="hide">郵寄區號*</label>
+                    <div class="address-item district-item">
+                        <label for="district" class="hide">地區*</label>
                         <select id="district" required>
                             <option value="">地區</option>
                         </select>
                     </div>
-                    <div class="address-full">
-                        <label for="postcode" class="hide">郵寄區號*</label>
+                    <div class="address-item address-full">
+                        <label for="address" class="hide">地址*</label>
                         <input type="text" id="address" placeholder="地址" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="secondary-div1">註冊人</div>
                 </div>
-                <div class="form-row">
+                <div class="form-row wider-form-row">
                     <div class="half-width">
                         <label for="name">姓名</label>
                         <input type="text" id="name" placeholder="姓名*" required>
@@ -101,7 +101,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row wider-form-row">
                     <div class="half-width">
                         <label for="birthday">國曆生日</label>
                         <input type="date" id="birthday" placeholder="國曆生日" onchange="calculateLunarBirthday()">
@@ -111,7 +111,7 @@
                         <input type="text" id="lunarBirthday" placeholder="農曆生日" readonly>
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-row wider-form-row">
                     <div class="half-width">
                         <label for="time">時辰</label>
                         <select id="time">
@@ -125,11 +125,15 @@
                 </div>
                 <div id="additionalMembers"></div>
                 <div class="form-row buttons-row">
-                    <div class="form-footer">
-                        <a class="link-button">登入</a> | <a class="link-button">忘記密碼</a>
+                    <div class="buttons-left">
+                        <div class="form-footer">
+                            <a class="link-button">登入</a> | <a class="link-button">忘記密碼</a>
+                        </div>
                     </div>
-                    <button type="button" class="secondary-button" id="addMemberBtn">+ 新增成員</button>
-                    <button type="submit">註冊</button>
+                    <div class="buttons-right">
+                        <button type="button" class="secondary-button" id="addMemberBtn">+ 新增成員</button>
+                        <button type="submit">註冊</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -257,45 +261,52 @@
             var memberCount = document.querySelectorAll('.additional-member').length + 1;
             var newMemberHtml = `
         <div class="form-row additional-member">
-            <div class="secondary-div1">成員${memberCount}</div>
-        </div>
-        <div class="form-row">
-            <div class="half-width">
-                <label for="name${memberCount}">姓名</label>
-                <input type="text" id="name${memberCount}" placeholder="姓名*" required>
-            </div>
-            <div class="half-width">
-                <label for="gender${memberCount}">性別</label>
-                <select id="gender${memberCount}" required>
-                    <option value="">性別</option>
-                    <option value="male">男</option>
-                    <option value="female">女</option>
-                </select>
+            <div class="secondary-div2">
+                <span class="member-number">成員${memberCount}</span>
+                <span class="close-member">&times;</span>
             </div>
         </div>
         <div class="form-row">
-            <div class="half-width">
-                <label for="birthday${memberCount}">國曆生日</label>
-                <input type="date" id="birthday${memberCount}" placeholder="國曆生日" onchange="calculateLunarBirthday()">
-            </div>
-            <div class="half-width">
-                <label for="lunarBirthday${memberCount}">農曆生日</label>
-                <input type="text" id="lunarBirthday${memberCount}" placeholder="農曆生日" readonly>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="half-width">
-                <label for="time${memberCount}">時辰</label>
-                <select id="time${memberCount}">
-                    <option value="">時辰</option>
-                </select>
-            </div>
-            <div class="half-width">
-                <label for="phone${memberCount}">電話</label>
-                <input type="tel" id="phone${memberCount}" placeholder="電話*" required>
-            </div>
-        </div>`;
+            <div class="form-row wider-form-row">
+                    <div class="half-width">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="姓名*" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="gender">性別</label>
+                        <select id="gender" required>
+                            <option value="">性別</option>
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row wider-form-row">
+                    <div class="half-width">
+                        <label for="birthday">國曆生日</label>
+                        <input type="date" id="birthday" placeholder="國曆生日" onchange="calculateLunarBirthday()">
+                    </div>
+                    <div class="half-width">
+                        <label for="lunarBirthday">農曆生日</label>
+                        <input type="text" id="lunarBirthday" placeholder="農曆生日" readonly>
+                    </div>
+                </div>
+                <div class="form-row wider-form-row">
+                    <div class="half-width">
+                        <label for="time">時辰</label>
+                        <select id="time">
+                            <option value="">時辰</option>
+                        </select>
+                    </div>
+                    <div class="half-width">
+                        <label for="phone">電話</label>
+                        <input type="tel" id="phone" placeholder="電話*" required>
+                    </div>
+                </div>
+                <div id="additionalMembers"></div>
+                `;
             document.getElementById("additionalMembers").insertAdjacentHTML('beforeend', newMemberHtml);
+
         };
 
 
