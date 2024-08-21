@@ -327,6 +327,17 @@ hr {
         transition: transform 0.3s ease;
         margin-top: -20px;
     }
+    .category {
+        background-color: #A58C6D;
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        width: 10%;
+        max-width: 10%;
+        box-sizing: border-box;
+    }
 
     .wrapper {
         height: calc(100vh - 60px);
@@ -387,6 +398,19 @@ hr {
         margin-left: 30px;
     }
 
+    .category {
+        background-color: #A58C6D;
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        width: 15%;
+        max-width: 15%;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
 }
 
 
@@ -412,6 +436,7 @@ hr {
         overflow-x: hidden;
     }
 
+
     .wrapper {
         height: calc(100vh - 40px);
         padding-top: 70px;
@@ -435,7 +460,7 @@ hr {
 
     .category {
         width: 100%;
-        font-size: 18px;
+        font-size: 15px;
         text-align: center;
         padding-left: 0;
         margin: 10px 0;
