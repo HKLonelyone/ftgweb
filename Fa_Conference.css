@@ -262,7 +262,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 20px;
+        padding-top: 50px;
     }
 
     .item-section {
@@ -349,7 +349,7 @@
 
     .wrapper {
         height: calc(100vh - 40px);
-        margin-top: 60px;
+        margin-top: 30px;
     }
 
     .item-section {
@@ -434,6 +434,11 @@
     }
     .footer {
         width: 108%;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        margin-top: 30px;
     }
 
     .select-selected {
