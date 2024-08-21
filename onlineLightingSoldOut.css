@@ -231,7 +231,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -10%;
+        margin-top: -2%;
     }
 
     .item-section {
@@ -507,6 +507,11 @@
 
     .selector{
         width: 40%;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        padding-top: 15%;
     }
 
     .total-section {
