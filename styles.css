@@ -606,6 +606,11 @@ select {
         width: 100%;
     }
 
+    #registerModal .wider-form-row{
+        width: 100%;
+        margin-bottom: -2px;
+    }
+
     #registerModal .form-row.address-part {
         display: flex;
         flex-wrap: wrap;
