@@ -42,6 +42,10 @@
     gap: 50px;
 }
 
+select {
+    width: 100%;
+}
+
 .button {
     width: 100px;
     height: 300px;
@@ -222,6 +226,17 @@
     width: 1400px;
 }
 
+#registerModal .form-row > input[type="password"] {
+    width: 100%;
+    margin-top: -15px;
+}
+
+#registerModal .form-row > input[type="email"] {
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 16px;
+}
+
 #registerModal h2 {
     color: #8B0000;
     margin-bottom: 20px;
@@ -231,13 +246,13 @@
 #registerModal select {
     width: calc(100% - 0px);
     padding: 10px;
-    margin: 10px 0;
+    margin: 0;
     border: 1px solid #ddd;
     box-sizing: border-box;
 }
 
 #registerModal .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 #registerModal .form-group select {
@@ -247,17 +262,16 @@
 #registerModal .form-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 16px;
+    margin-bottom: 16px;
 }
-
 
 #registerModal .form-actions {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 #registerModal .form-footer {
@@ -273,7 +287,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 16px;
     flex-wrap: wrap;
 }
 
@@ -321,26 +335,49 @@
 #registerModal label {
     display: block;
     text-align: left;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 #registerModal input[type="text"],
 #registerModal input[type="date"],
+#registerModal input[type="email"],
+#registerModal input[type="password"],
+#registerModal input[type="tel"],
 #registerModal select {
     display: block;
-    width: 100px;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     border: 1px solid #ddd;
     box-sizing: border-box;
     text-align: left;
+}
+
+.address-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.address-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.address-item:last-child {
+    margin-right: 0;
+}
+
+select {
+    width: 100%;
 }
 
 #registerModal .form-row.address-part {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
-    gap: 10px;
+    gap: 16px;
 }
 
 #registerModal .address-item {
@@ -348,10 +385,7 @@
     flex-shrink: 0;
 }
 
-#registerModal .postcode-item {
-    width: 100px;
-}
-
+#registerModal .postcode-item,
 #registerModal .city-item,
 #registerModal .district-item {
     width: 100px;
@@ -367,6 +401,7 @@
 #registerModal .address-item select {
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 0;
 }
 
 #registerModal .wider-form-row {
@@ -377,7 +412,7 @@
 }
 
 #registerModal .wider-form-row .half-width {
-    width: 48%;
+    width: calc(50% - 8px);
 }
 
 #registerModal .wider-form-row input[type="text"],
@@ -385,12 +420,7 @@
 #registerModal .wider-form-row input[type="tel"],
 #registerModal .wider-form-row select {
     width: 100%;
-}
-
-#registerModal .form-row .half-width input[type="text"],
-#registerModal .form-row .half-width input[type="tel"] {
-    width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 0;
 }
 
 #registerModal .form-row .half-width {
@@ -399,18 +429,13 @@
 }
 
 #registerModal .form-row .half-width label {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-#registerModal .form-row>div {
+#registerModal .form-row > div {
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
-
-#registerModal .form-row label {
-    margin-bottom: 10px;
-}
-
 
 
 
@@ -510,7 +535,7 @@
         background-size: cover;
         background-position: center center;
         width: 100%;
-        height: calc(100vh - 40px);
+        height: calc(100vh - 60px);
         position: fixed;
         top: 60px;
         overflow-y: auto;
@@ -518,7 +543,7 @@
 
     .image-buttons {
         right: 50px;
-        top: 350px;
+        top: 300px;
         gap: 15px;
     }
 
@@ -533,16 +558,6 @@
         padding: 15px;
     }
 
-    #registerModal .form-row>div {
-        margin-bottom: 8px;
-        gap: 3px;
-    }
-
-    #registerModal .form-row .address-part>div {
-        width: 100%;
-        gap: 3px;
-    }
-
     .form-actions {
         flex-direction: column;
         align-items: stretch;
@@ -553,20 +568,6 @@
         margin: 5px 0;
     }
 
-    #registerModal .buttons-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #registerModal .buttons-row button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    #registerModal .modal-content {
-        margin: 5% auto;
-        width: 100%;
-    }
     #registerModal .modal-content {
         margin: 5% auto;
         width: 90%;
@@ -586,16 +587,18 @@
 
     #registerModal .form-row > div {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     #registerModal input[type="text"],
     #registerModal input[type="date"],
     #registerModal input[type="tel"],
+    #registerModal input[type="email"],
+    #registerModal input[type="password"],
     #registerModal select {
         width: 100%;
         padding: 8px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         font-size: 14px;
     }
 
@@ -604,7 +607,9 @@
     }
 
     #registerModal .form-row.address-part {
+        display: flex;
         flex-wrap: wrap;
+        gap: 8px;
     }
 
     #registerModal .address-item,
@@ -612,15 +617,11 @@
     #registerModal .address-full {
         width: 100%;
     }
-    #registerModal .form-row.address-part {
-        display: flex;
-        flex-wrap: nowrap;
-    }
 
     #registerModal .city-item,
     #registerModal .district-item {
-        width: 50%;
-        flex: 1;
+        width: calc(50% - 4px);
+        flex: 0 0 calc(50% - 4px);
     }
 
     #registerModal .city-item select,
@@ -630,7 +631,8 @@
 
     #registerModal label {
         font-size: 14px;
-        margin-bottom: 3px;
+        margin-bottom: 4px;
+        display: block;
     }
 
     #registerModal .buttons-row {
@@ -660,4 +662,41 @@
         width: 100%;
         margin-bottom: 10px;
     }
+
+    #registerModal .form-row > input[type="password"] {
+        width: 100%;
+        margin-top: -2px;
+        margin-bottom: 8px;
+    }
+
+    #registerModal .form-row > input[type="email"] {
+        width: 100%;
+        margin-top: -2px;
+        margin-bottom: 8px;
+    }
+
+    .address-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: -30px;
+    }
+
+    #registerModal .address-full > input[type="text"] {
+        width: 100%;
+        margin-top: -20px;
+    }
+
+    .address-item {
+        flex: 1;
+    }
+
+    .address-item:last-child {
+        margin-right: 0;
+    }
+
+    select {
+        width: 100%;
+    }
+
 }
