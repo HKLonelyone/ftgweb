@@ -66,6 +66,7 @@
     .background-section {
         height: calc(100vh - 60px);
         overflow-y: hidden;
+        background-position: calc(80% - -180px) bottom;
     }
 
     .image-buttons {
