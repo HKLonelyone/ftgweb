@@ -27,7 +27,7 @@
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: calc(100vh - -200px);
+    height: calc(100vh - -60px);
     position: fixed;
     top: 60px;
     overflow-y: auto;
