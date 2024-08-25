@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center bottom;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .navbar {
@@ -48,9 +48,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 70px;
+    padding: 20px;
+    padding-top: 0px;
     height: calc(100vh - 60px);
     overflow-y: auto;
+    padding-top: 80px;
+    gap: 20px;
 }
 
 .title {
@@ -65,18 +68,18 @@
     font-size: 30px;
     width: 259px;
     height: 100px;
-    margin-bottom: 20px;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px 20px 0px 20px;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1400px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     max-height: calc(100vh - 200px);
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -263,7 +266,7 @@ input[type="password"] {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+
 }
 
 .continue-shopping {
@@ -281,170 +284,77 @@ input[type="password"] {
     opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding-left: 20px;
-        padding-right: 10px;
-    }
-
-    .right-section {
-        margin-right: 50px;
-    }
-
-    .logo {
-        height: 40px;
-    }
-
-    .cart-icon {
-        width: 20px;
-    }
-
-    .user-name {
-        font-size: 12px;
-    }
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        padding-top: 70px;
-        height: calc(100vh - 60px);
-        overflow-y: auto;
+@media (min-width: 1024px) {
+    .background {
+        overflow: hidden;
     }
 
     .title {
-        font-size: 24px;
-        padding: 20px;
-        width: 250px;
-        height: 70px;
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
     }
-
 
     .container {
-        background: rgba(255, 255, 255, 0.8);
-        width: 100%;
-        max-width: 1400px;
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
         max-height: calc(100vh - 200px);
-        margin: 0 auto;
-        box-sizing: border-box;
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
     }
-    .table-header,
-    .table-row {
+
+    .wrapper {
+        height: calc(100vh - 60px);
+        overflow: hidden;
         display: flex;
-        flex-wrap: nowrap;
-    }
-
-    form {
-        max-width: 100%;
-    }
-
-    .cart-summary {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .action-buttons {
-        flex-direction: column;
-    }
-
-    .col-1, .col-2, .col-3 {
-        flex-shrink: 0;
-    }
-
-    .action-buttons {
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .continue-shopping, .checkout {
-        width: auto;
-        padding: 10px;
-        font-size: 14px;
-    }
-    .footer {
-        padding: 10px 20px;
-        font-size: 14px;
-        height: auto;
-        justify-content: flex-end;
-        flex-wrap: nowrap;
-        background-position: right;
-    }
-
-    .footer .total-text {
-        font-size: 16px;
-        white-space: nowrap;
-        margin-right: 10px;
-        color: white;
-    }
-
-    .footer .buttons {
-        display: flex;
-        gap: 5px;
-        flex-wrap: nowrap;
-    }
-
-    .cancel-btn, .submit-btn {
-        padding: 10px 20px;
-        font-size: 15px;
-        white-space: nowrap;
-    }
-
-    .cancel-btn {
-        background-color: #960a1d;
-        color: white;
-        border: 1px solid white;
-    }
-
-    .submit-btn {
-        background-color: white;
-        color: #960a1d;
-        border: 1px solid white;
+        justify-content: center;
+        align-items: center;
+        padding-top: 60px;
     }
 }
 
-@media screen and (max-width: 480px) {
-    .navbar {
-        padding-left: 20px;
-        padding-right: 10px;
+@media (max-width: 1023px){
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        transform-origin: center center;
+        transition: transform 0.3s ease;
+        margin-top: -20px;
     }
 
     .wrapper {
-        height: calc(100vh - 40px);
-        padding-top: 70px;
-    }
-
-    .right-section {
+        height: calc(100vh - 60px);
+        overflow: hidden;
         display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 10px;
-        padding-left: 10px;
-        margin-right: 50px;
+        padding-top: 60px;
     }
+}
 
-    .logo {
-        height: 40px;
+@media screen and (max-width: 768px) {
+    .background {
+        overflow: hidden;
     }
-
-    .cart-icon {
-        width: 20px;
-    }
-
-    .user-name {
-        font-size: 15px;
-    }
-
 
     .title {
-        font-size: 24px;
-        padding: 20px;
-        width: 260px;
-        height: 90px;
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
     }
-
 
     .container {
         max-height: calc(100vh - 150px);
@@ -453,6 +363,40 @@ input[type="password"] {
         padding: 15px;
         margin-left: -20px;
         box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        padding-top: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .background {
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+        width: 210px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        max-height: calc(100vh - 150px);
+        width: 100vw;
+        max-width: none;
+        padding: 15px;
+        margin-left: -20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        height: calc(100vh - 40px);
+        padding-top: 70px;
     }
 
     input[type="password"] {
@@ -483,16 +427,16 @@ input[type="password"] {
 
     .cart-summary {
         flex-direction: column;
-        align-items: flex-end;
+        align-items: right;
     }
 
     .action-buttons {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .continue-shopping, .checkout {
-        padding: 8px 12px;
+        padding: 10px 20px;
         font-size: 12px;
     }
 
