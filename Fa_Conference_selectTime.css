@@ -49,7 +49,6 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-top: 0px;
     height: calc(100vh - 60px);
     overflow-y: auto;
     padding-top: 80px;
@@ -131,7 +130,6 @@ select {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    margin-left: 0;
     margin-right: auto;
 }
 
@@ -297,7 +295,6 @@ select {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        margin-left: 0;
         margin-right: auto;
     }
 
@@ -400,7 +397,6 @@ select {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        margin-left: 0;
         margin-right: auto;
     }
 
@@ -509,7 +505,6 @@ select {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        margin-left: 0;
         margin-right: auto;
     }
 
@@ -623,7 +618,6 @@ select {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        margin-left: 0;
         margin-right: auto;
     }
 

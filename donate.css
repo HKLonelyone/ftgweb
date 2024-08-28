@@ -134,7 +134,6 @@ input[type="text"] {
 }
 
 hr {
-    border: 0;
     border-top: 1px solid #d1bbae;
     margin: 20px 24%;
     width: 52%;
@@ -225,7 +224,6 @@ hr {
     }
 
     hr {
-        border: 0;
         border-top: 1px solid #d1bbae;
         margin: 10px 24% 1px;
         width: 52%;
@@ -479,7 +477,6 @@ hr {
     .category {
         width: 23%;
         max-width: 23%;
-        margin-left: 0;
     }
 
     .items-grid {

@@ -218,7 +218,6 @@ select {
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
-    padding-left: px;
 }
 
 #registerModal .modal-content {
@@ -366,7 +365,7 @@ select {
 }
 
 .address-item:last-child {
-    margin-right: 0;
+    margin-right: 0px;
 }
 
 select {
@@ -394,14 +393,12 @@ select {
 #registerModal .address-full {
     flex-grow: 1;
     flex-shrink: 1;
-    min-width: 50;
 }
 
 #registerModal .address-item input,
 #registerModal .address-item select {
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 0;
 }
 
 #registerModal .wider-form-row {
@@ -698,7 +695,7 @@ select {
     }
 
     .address-item:last-child {
-        margin-right: 0;
+        margin-right: 0px;
     }
 
     select {

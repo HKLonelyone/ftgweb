@@ -49,7 +49,6 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-top: 0px;
     height: calc(100vh - 60px);
     overflow-y: auto;
     padding-top: 80px;
@@ -246,7 +245,6 @@
 
     .section {
         flex-direction: column;
-        padding: 0;
         border-bottom: 1px solid #ddd;
         margin-bottom: 10px;
     }
@@ -255,7 +253,6 @@
         width: 100%;
         font-size: 18px;
         text-align: center;
-        padding-left: 0;
         margin: 10px 0;
     }
 
@@ -396,7 +393,6 @@
 
     .section {
         flex-direction: column;
-        padding: 0;
         border-bottom: 1px solid #ddd;
         margin-bottom: 10px;
     }
