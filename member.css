@@ -125,49 +125,54 @@
     margin-bottom: 20px;
 }
 
-.address-section {
+.form-row1 {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-top: 10px;
 }
 
-.address-input {
+.form-row1 .address-part {
     display: flex;
-    flex-direction: column;
-    flex: 1;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 16px;
 }
 
-.address-input-full {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.address-item {
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
-.address-input label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #333;
+.postcode-item,
+.city-item,
+.district-item {
+    width: 80px;
 }
 
-.address-input label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
-.address-input input,
-.address-input-full input,
-.address-input select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-
-.city-select,
-.region-select {
+.address-full {
     flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.address-item input,
+.address-item select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #A8A8A8;
+}
+
+.hide {
+    display: none;
+}
+
+.address-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 16px;
 }
 
 .confirm-button {
@@ -332,6 +337,7 @@
 
 #member-select {
     color: #846136;
+    margin-left: 10px;
 }
 
 #gender {
@@ -350,6 +356,15 @@
 #payment-date {
     padding: 5px;
     font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #ccc;
+    padding-right: 30px;
 }
 
 .transaction-table {
@@ -382,12 +397,15 @@
 .table-header .col-1 {
     background-color: #A58C6D;
     color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
     font-size: 14px;
     text-align: center;
-    width: 15%;
-    max-width: 15%;
-    margin-bottom: 10px;
-    border: none;
+    display: inline-block;
+    min-width: 20%;
+    max-width: fit-content;
+    box-sizing: border-box;
 }
 
 .table-header-option {
@@ -814,7 +832,17 @@
     }
 
     .table-header .col-1 {
-        width: 25%;
+        background-color: #A58C6D;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    min-width: 20%;
+    max-width: fit-content;
+    box-sizing: border-box;
     }
 
     .table-row .col-1 {
@@ -839,6 +867,59 @@
         flex-direction: row;
         gap: 10px;
         justify-content: space-between;
+    }
+
+    .form-row1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .form-row1 .address-part {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    .address-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .postcode-item,
+    .city-item,
+    .district-item {
+        width: 80px;
+    }
+
+    .address-full {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .address-full input {
+        width: 70%;
+    }
+
+    .address-item input,
+    .address-item select {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #A8A8A8;
+    }
+
+    .address-full input {
+        width: 70%;
+        border: 1px solid #A8A8A8;
+    }
+
+    .address-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        gap: 16px;
     }
 
     .half-width {
@@ -915,6 +996,8 @@
         font-size: 12px;
     }
 
+
+
 }
 
 @media (max-width: 1023px) {
@@ -973,7 +1056,6 @@
         align-items: center;
         color: #846136;
         white-space: nowrap;
-        padding-right: 25%;
     }
 
     #personal-info-content .select-wrapper {
@@ -1140,6 +1222,72 @@
         padding: 3px 15px;
         font-size: 12px;
     }
+
+    .form-row {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .form-row1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .form-row1 .address-part {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    .address-item {
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .postcode-item,
+    .city-item,
+    .district-item {
+        width: 80px;
+    }
+
+    .address-full {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    .address-full input {
+        width: 70%;
+    }
+
+    .address-item input,
+    .address-item select {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #A8A8A8;
+    }
+
+    .address-full input {
+        width: 70%;
+        border: 1px solid #A8A8A8;
+    }
+
+    .address-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        gap: 16px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1155,20 +1303,18 @@
     }
 
     .container {
-        max-height: calc(100vh - 200px);
-        overflow-y: auto;
-        transform-origin: center center;
-        transition: transform 0.3s ease;
-        margin-top: -20px;
+        max-height: calc(100vh - 150px);
+        width: 100vw;
+        max-width: none;
+        padding: 15px;
+        margin-left: -20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .wrapper {
-        height: calc(100vh - 60px);
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 60px;
+        height: calc(100vh - 40px);
+        padding-top: 70px;
     }
 
     .sidebar {
@@ -1200,7 +1346,6 @@
         display: flex;
         align-items: center;
         padding: 15px;
-        align-items: center;
     }
 
     .mobile-back-button {
@@ -1236,29 +1381,6 @@
         margin-bottom: 20px;
     }
 
-    .main-content .address-section {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .main-content .address-input {
-        width: 50%;
-    }
-
-    .main-content .address-input-full {
-        width: 100%;
-    }
-
-    .main-content .address-input input,
-    .main-content .address-input-full input,
-    .main-content .address-input select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        font-size: 16px;
-    }
-
     .main-content .confirm-button {
         width: 25%;
         padding: 10px;
@@ -1269,16 +1391,12 @@
         margin-top: 20px;
     }
 
-    #personal-info-content {
-        padding: 20px;
-    }
-
     #personal-info-content .form-horizontal {
         display: flex;
         flex-direction: column;
-        padding: 20px;
         background-color: #fff;
-        width: 100vh;
+        width: 100%;
+        margin-top: -50px;
     }
 
     #personal-info-content .form-row {
@@ -1292,11 +1410,13 @@
         display: flex;
         flex-direction: column;
         align-items: stretch;
+        gap: 10px;
     }
+
 
     #personal-info-content .select-wrapper {
         width: 100%;
-        margin-bottom: 10px;
+        margin-left: -10px;
     }
 
     #personal-info-content select.form-control,
@@ -1335,7 +1455,7 @@
     }
 
     #transaction-content {
-        width: 110vh;
+        width: 90vh;
     }
 
     #transaction-content .transaction-header {
@@ -1390,17 +1510,12 @@
 
     #change-password-content {
         padding: 20px;
-    }
-
-    #change-password-content {
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        padding: 20px;
         box-sizing: border-box;
-        display: none;
     }
 
     #change-password-content .form-horizontal {
@@ -1461,9 +1576,43 @@
     #change-password-content .confirm-button:hover {
         background-color: #991414;
     }
+
+    .form-row1 {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-row1 .address-part {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .address-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: -30px;
+    }
+
+    .address-full input {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #A8A8A8;
+    }
+
+    .postcode-item {
+        margin-bottom: 37px;
+    }
+
+    .address-item {
+        flex: 1;
+    }
+
+    .address-item:last-child {
+        margin-right: 0px;
+    }
 }
-
-
 
 @media screen and (max-width: 480px) {
     .background {
@@ -1611,8 +1760,11 @@
     #personal-info-content .form-horizontal {
         display: flex;
         flex-direction: column;
-        padding: 20px;
         background-color: #fff;
+        width: 30vh;
+    }
+
+    #transaction-content {
         width: 50vh;
     }
 
@@ -1622,9 +1774,19 @@
     }
 
     #transaction-content #payment-date {
-        width: 70%;
+        width: 50%;
         margin-top: 5px;
         padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 
     #transaction-content .transaction-table {
@@ -1673,5 +1835,23 @@
         justify-content: center;
         align-items: center;
         padding-left: 10%;
+    }
+}
+
+@media (max-width: 420px) {
+    #transaction-content #payment-date {
+        width: 55%;
+        margin-top: 5px;
+        padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 }

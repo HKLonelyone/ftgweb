@@ -372,7 +372,7 @@ select {
     width: 100%;
 }
 
-#registerModal .form-row.address-part {
+#registerModal .form-row .address-part {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;

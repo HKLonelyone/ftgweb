@@ -50,26 +50,29 @@
                         <div id="common-info-content" class="content-section active">
                             <p class="email">信箱<br>ikjhy234@gmail.com</p>
                             地址
-                            <div class="address-section">
-                                <div class="address-input">
-                                    <label for="zip-code">郵遞區號</label>
-                                    <input type="text" id="zip-code" class="zip-code" placeholder="郵遞區號">
+                            <div class="form-row1 address-part">
+                                <div class="address-item postcode-item">
+                                    <label for="postcode" class="hide">郵寄區號*</label>
+                                    <input type="text" id="postcode" placeholder="郵寄區號*" required>
                                 </div>
-                                <div class="address-input">
-                                    <label for="city-select">縣市</label>
-                                    <select id="city-select" class="city-select">
-                                        <option value="" disabled selected>縣市</option>
-                                    </select>
+                                <div class="address-container">
+                                    <div class="address-item city-item">
+                                        <label for="city" class="hide">縣市*</label>
+                                        <select id="city" required>
+                                            <option value="">縣市</option>
+                                        </select>
+                                    </div>
+                                    <div class="address-item district-item">
+                                        <label for="district" class="hide">地區*</label>
+                                        <select id="district" required>
+                                            <option value="">地區</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="address-input">
-                                    <label for="region-select">地區</label>
-                                    <select id="region-select" class="region-select">
-                                        <option value="" disabled selected>地區</option>
-                                    </select>
-                                </div>
-                                <div class="address-input-full">
-                                    <label for="address">地址</label>
-                                    <input type="text" id="address" class="address-input-full" placeholder="地址">
+
+                                <div class="address-item address-full">
+                                    <label for="address" class="hide">地址*</label>
+                                    <input type="text" id="address" placeholder="地址" required>
                                 </div>
                             </div>
                             <button class="confirm-button">確定</button>
