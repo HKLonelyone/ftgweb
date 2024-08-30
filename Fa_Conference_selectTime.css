@@ -761,8 +761,8 @@ select {
         width: 108%;
     }
 
-    .select {
-        width: 10%;
+    select {
+        width: 50%;
 
         -webkit-appearance: none;
         -moz-appearance: none;

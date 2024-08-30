@@ -76,6 +76,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    min-height: 80vh;
     max-height: calc(100vh - 200px);
     margin: 0 auto;
     box-sizing: border-box;
@@ -105,13 +106,13 @@
     padding: 10px 0;
     color: #666;
     cursor: pointer;
+    padding: 10px;
 }
 
 .sidebar li.active {
     color: #b31b1b;
     font-weight: bold;
     background-color: rgba(171, 10, 10, 0.1);
-    padding: 10px;
 }
 
 .main-content {
@@ -378,7 +379,7 @@
 
 .table-header {
     display: flex;
-    align-items: stretch;
+    align-items: center;
 }
 
 .table-row {
@@ -402,15 +403,17 @@
     border: none;
     font-size: 14px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 20%;
     max-width: fit-content;
     box-sizing: border-box;
+    height: 40px;
 }
 
 .table-header-option {
     color: red;
-    margin-top: -7px;
 }
 
 .table-header .col-2 {
@@ -440,11 +443,15 @@
     background-color: #fff;
     color: #b31b1b;
     border: 1px solid #b31b1b;
-    padding: 3px 30px;
+    padding: 5px 15px;
     cursor: pointer;
-    font-size: 15px;
-    margin-top: -3px;
-    white-space: nowrap;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    margin-top: 5px;
 }
 
 .table-row .col-1 {
@@ -808,6 +815,7 @@
         transform-origin: center center;
         transition: transform 0.3s ease;
         margin-top: -20px;
+        min-height: 80vh;
     }
 
     .wrapper {
@@ -816,7 +824,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     .form-group {
@@ -833,16 +841,21 @@
 
     .table-header .col-1 {
         background-color: #A58C6D;
-    color: white;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    font-size: 14px;
-    text-align: center;
-    display: inline-block;
-    min-width: 20%;
-    max-width: fit-content;
-    box-sizing: border-box;
+        color: white;
+        margin-top: 10px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        min-width: 10%;
+        max-width: fit-content;
+        box-sizing: border-box;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 35px !important;
+        padding: 0 !important;
+        margin: 10px 0 !important;
     }
 
     .table-row .col-1 {
@@ -971,6 +984,25 @@
         flex-wrap: wrap;
     }
 
+    #transaction-content .table-header .col-1 {
+        background-color: #A58C6D;
+        color: white;
+        margin-top: 10px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        min-width: 20%;
+        max-width: fit-content;
+        box-sizing: border-box;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 35px !important;
+        padding: 0 !important;
+        margin: 10px 0 !important;
+    }
+
     #transaction-content .table-header .col-1,
     #transaction-content .table-row .col-1 {
         width: 100%;
@@ -1018,6 +1050,7 @@
         transform-origin: center center;
         transition: transform 0.3s ease;
         margin-top: -20px;
+        min-height: 80vh;
     }
 
     .wrapper {
@@ -1026,7 +1059,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 60px;
+        padding-top: 80px;
     }
 
     #change-password-content .confirm-button {
@@ -1198,6 +1231,25 @@
         flex-wrap: wrap;
     }
 
+    #transaction-content .table-header .col-1 {
+        background-color: #A58C6D;
+        color: white;
+        margin-top: 10px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        min-width: 20%;
+        max-width: fit-content;
+        box-sizing: border-box;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 35px !important;
+        padding: 0 !important;
+        margin: 10px 0 !important;
+    }
+
     #transaction-content .table-header .col-1,
     #transaction-content .table-row .col-1 {
         width: 100%;
@@ -1310,11 +1362,12 @@
         margin-left: -20px;
         box-sizing: border-box;
         overflow-x: hidden;
+        min-height: 80vh;
     }
 
     .wrapper {
         height: calc(100vh - 40px);
-        padding-top: 70px;
+        padding-top: 80px;
     }
 
     .sidebar {
@@ -1357,6 +1410,12 @@
         margin-right: 10px;
         display: flex;
     }
+
+    .mobile-back-button img {
+        width: 30px;
+        height: 30px;
+    }
+
 
     .mobile-header-title {
         font-size: 18px;
@@ -1455,7 +1514,7 @@
     }
 
     #transaction-content {
-        width: 90vh;
+        width: 80vh;
     }
 
     #transaction-content .transaction-header {
@@ -1634,11 +1693,12 @@
         margin-left: -20px;
         box-sizing: border-box;
         overflow-x: hidden;
+        min-height: 80vh;
     }
 
     .wrapper {
         height: calc(100vh - 40px);
-        padding-top: 70px;
+        padding-top: 80px;
     }
 
     .item-section {
@@ -1808,13 +1868,27 @@
         width: 100%;
         text-align: left;
         margin-bottom: 5px;
-        padding-right: 80px;
+        padding-right: 50px;
     }
 
     #transaction-content .table-row .col-2 {
         width: 20%;
         text-align: left;
         padding-right: 50px;
+    }
+
+    #transaction-content .table-header .col-2already-refund {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #transaction-content .table-header .col-2 {
+        color: #0000ff;
+        margin-top: 5px;
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+        margin-right: 20px;
     }
 
     #transaction-content .table-header .col-3,
@@ -1838,6 +1912,28 @@
     }
 }
 
+@media (max-width: 430px) {
+    #transaction-content #payment-date {
+        width: 55%;
+        margin-top: 5px;
+        padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
+    }
+
+    #transaction-content {
+        width: 40vh;
+    }
+}
+
 @media (max-width: 420px) {
     #transaction-content #payment-date {
         width: 55%;
@@ -1853,5 +1949,23 @@
         background-position-y: 5px;
         border: 1px solid #ccc;
         padding-right: 30px;
+    }
+
+    #transaction-content {
+        width: 40vh;
+    }
+}
+
+@media screen and (max-width: 376px){
+    #transaction-content {
+        width: 50vh;
+    }
+    #change-password-content .form-horizontal {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -20%;
     }
 }
