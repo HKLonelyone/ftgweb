@@ -99,17 +99,31 @@ select {
     width: 25%;
     height: 30px;
     margin-bottom: -80px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 5px;
+    padding-right: 30px;
 }
 
 .category {
     background-color: #A58C6D;
     color: white;
     padding: 10px;
+    margin-top: 10px;
     border: none;
     font-size: 14px;
     text-align: center;
-    width: 23%;
-    max-width: 23%;
+    display: inline-block;
+    min-width: 20%;
+    max-width: fit-content;
     box-sizing: border-box;
 }
 
@@ -225,7 +239,8 @@ input[type="checkbox"]:disabled {
     gap: 10px;
 }
 
-.cancel-btn, .submit-btn {
+.cancel-btn,
+.submit-btn {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -272,11 +287,13 @@ hr {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 10%;
-        max-width: 10%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 
@@ -303,9 +320,28 @@ hr {
         font-size: 1.2em;
     }
 
+    select {
+        font-size: 20px;
+        width: 25%;
+        height: 30px;
+        margin-bottom: -80px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        padding: 5px;
+        padding-right: 30px;
+    }
+
 }
 
-@media (max-width: 1023px){
+@media (max-width: 1023px) {
     .background {
         overflow: hidden;
     }
@@ -324,15 +360,18 @@ hr {
         transition: transform 0.3s ease;
         margin-top: -20px;
     }
+
     .category {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 10%;
-        max-width: 10%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 
@@ -344,6 +383,7 @@ hr {
         align-items: center;
         padding-top: 60px;
     }
+
     .total-section {
         display: flex;
         flex-direction: column;
@@ -399,13 +439,14 @@ hr {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 15%;
-        max-width: 15%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
-        white-space: nowrap;
     }
 
 }
@@ -447,6 +488,17 @@ hr {
         font-size: 20px;
         width: 50%;
         height: 30px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        padding-right: 30px;
     }
 
     .section {
@@ -456,10 +508,17 @@ hr {
     }
 
     .category {
-        width: 100%;
-        font-size: 15px;
+        background-color: #A58C6D;
+        color: white;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        font-size: 14px;
         text-align: center;
-        margin: 10px 0;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
+        box-sizing: border-box;
     }
 
     .items-grid {
@@ -528,7 +587,8 @@ hr {
         flex-wrap: nowrap;
     }
 
-    .cancel-btn, .submit-btn {
+    .cancel-btn,
+    .submit-btn {
         padding: 10px 20px;
         font-size: 15px;
         white-space: nowrap;
@@ -547,7 +607,7 @@ hr {
     }
 }
 
-@media (max-width: 420px){
+@media (max-width: 420px) {
     .container {
         overflow-x: hidden;
     }
@@ -556,11 +616,22 @@ hr {
         width: 108%;
     }
 
-    .select{
+    .select {
         width: 10%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        padding: 5px;
+        padding-right: 30px;
     }
 
-    .selector{
+    .selector {
         width: 40%;
     }
 
@@ -578,7 +649,8 @@ hr {
         margin-right: -45px;
     }
 
-    .cancel-btn, .submit-btn {
+    .cancel-btn,
+    .submit-btn {
         padding: 8px 18px;
         font-size: 15px;
         white-space: nowrap;
@@ -594,5 +666,19 @@ hr {
         background-color: white;
         color: #960a1d;
         border: 1px solid white;
+    }
+
+    .category {
+        background-color: #A58C6D;
+        color: white;
+        padding: 10px;
+        margin-top: 10px;
+        border: none;
+        font-size: 14px;
+        text-align: center;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
+        box-sizing: border-box;
     }
 }

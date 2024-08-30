@@ -49,7 +49,6 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-top: 0px;
     height: calc(100vh - 60px);
     overflow-y: auto;
     padding-top: 80px;
@@ -112,6 +111,7 @@
     color: #b31b1b;
     font-weight: bold;
     background-color: rgba(171, 10, 10, 0.1);
+    padding: 10px;
 }
 
 .main-content {
@@ -772,14 +772,14 @@
     display: none;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
     .background {
         overflow: hidden;
     }
 
     .title {
         font-size: 25px;
-        width: 220px;
+        width: 210px;
         height: 80px;
         margin-bottom: 20px;
     }
@@ -799,19 +799,6 @@
         justify-content: center;
         align-items: center;
         padding-top: 60px;
-    }
-    .title {
-        font-size: 24px;
-        width: 210px;
-        height: 80px;
-    }
-
-    .navbar {
-        padding-left: 15px;
-    }
-
-    .right-section {
-        margin-right: 15px;
     }
 
     .form-group {
@@ -930,7 +917,7 @@
 
 }
 
-@media (max-width: 1023px){
+@media (max-width: 1023px) {
     .background {
         overflow: hidden;
     }
@@ -1585,105 +1572,106 @@
         margin: -50px;
     }
 
-.space{
-    padding-top: 60px;
-}
+    .space {
+        padding-top: 60px;
+    }
 
-.footer .total-text {
-    font-size: 16px;
-    white-space: nowrap;
-    margin-right: 10px;
-    color: white;
-}
+    .footer .total-text {
+        font-size: 16px;
+        white-space: nowrap;
+        margin-right: 10px;
+        color: white;
+    }
 
-.footer .buttons {
-    display: flex;
-    gap: 5px;
-    flex-wrap: nowrap;
-}
+    .footer .buttons {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
 
-.cancel-btn, .submit-btn {
-    padding: 10px 20px;
-    font-size: 15px;
-    white-space: nowrap;
-}
+    .cancel-btn,
+    .submit-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
 
-.cancel-btn {
-    background-color: #960a1d;
-    color: white;
-    border: 1px solid white;
-}
+    .cancel-btn {
+        background-color: #960a1d;
+        color: white;
+        border: 1px solid white;
+    }
 
-.submit-btn {
-    background-color: white;
-    color: #960a1d;
-    border: 1px solid white;
-}
+    .submit-btn {
+        background-color: white;
+        color: #960a1d;
+        border: 1px solid white;
+    }
 
-#personal-info-content .form-horizontal {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #fff;
-    width: 50vh;
-}
+    #personal-info-content .form-horizontal {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #fff;
+        width: 50vh;
+    }
 
-#transaction-content .transaction-header {
-    flex-direction: column;
-    align-items: flex-start;
-}
+    #transaction-content .transaction-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-#transaction-content #payment-date {
-    width: 70%;
-    margin-top: 5px;
-    padding: 10px;
-}
+    #transaction-content #payment-date {
+        width: 70%;
+        margin-top: 5px;
+        padding: 10px;
+    }
 
-#transaction-content .transaction-table {
-    font-size: 14px;
-    white-space: nowrap;
-}
+    #transaction-content .transaction-table {
+        font-size: 14px;
+        white-space: nowrap;
+    }
 
-#transaction-content .table-section {
-    margin-bottom: 15px;
-}
+    #transaction-content .table-section {
+        margin-bottom: 15px;
+    }
 
-#transaction-content .table-header,
-#transaction-content .table-row {
-    flex-wrap: wrap;
-}
+    #transaction-content .table-header,
+    #transaction-content .table-row {
+        flex-wrap: wrap;
+    }
 
-#transaction-content .table-header .col-1,
-#transaction-content .table-row .col-1 {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 5px;
-    padding-right: 80px;
-}
+    #transaction-content .table-header .col-1,
+    #transaction-content .table-row .col-1 {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+        padding-right: 80px;
+    }
 
-#transaction-content .table-row .col-2 {
-    width: 20%;
-    text-align: left;
-    padding-right: 50px;
-}
+    #transaction-content .table-row .col-2 {
+        width: 20%;
+        text-align: left;
+        padding-right: 50px;
+    }
 
-#transaction-content .table-header .col-3,
-#transaction-content .table-row .col-3 {
-    width: 20%;
-    text-align: right;
-}
+    #transaction-content .table-header .col-3,
+    #transaction-content .table-row .col-3 {
+        width: 20%;
+        text-align: right;
+    }
 
-#transaction-content .refund-btn {
-    padding: 3px 15px;
-    font-size: 12px;
-}
+    #transaction-content .refund-btn {
+        padding: 3px 15px;
+        font-size: 12px;
+    }
 
-#change-password-content .form-horizontal {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10%;
-}
+    #change-password-content .form-horizontal {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+    }
 }

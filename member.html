@@ -44,7 +44,7 @@
 
                     <div class="main-content">
                         <div class="mobile-header">
-                            <button class="mobile-back-button">&larr;</button>
+                            <button class="mobile-back-button"><</button>
                             <h2 class="mobile-header-title"></h2>
                         </div>
                         <div id="common-info-content" class="content-section active">
@@ -273,8 +273,6 @@
                     <div class="mobile-footer-content">
                         <div class="total-text"></div>
                         <div class="buttons">
-                            <button class="cancel-btn"></button>
-                            <button class="submit-btn"></button>
                         </div>
                     </div>
                 </div>
@@ -626,7 +624,6 @@
         changePasswordConfirmModal.style.display = "none";
     });
 
-    // 處理成功模態框
     const successModal = document.getElementById("successModal");
     const successConfirmButton = document.getElementById("successConfirm");
     const commonInfoConfirmButton = document.querySelector("#common-info-content .confirm-button");

@@ -93,6 +93,7 @@
     padding-left: 2%;
     font-size: 20px;
 }
+
 .section {
     background-color: #ffffff;
     padding: 20px;
@@ -107,21 +108,33 @@ select {
     font-size: 20px;
     width: 25%;
     padding: 10px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #ccc;
+    padding-right: 30px;
 }
 
 .category {
     background-color: #A58C6D;
     color: white;
     padding: 10px;
+    margin-top: 10px;
     border: none;
     font-size: 14px;
     text-align: center;
-    width: 10%;
-    max-width: 10%;
+    display: inline-block;
+    min-width: 20%;
+    max-width: fit-content;
     box-sizing: border-box;
 }
 
-.selector{
+.selector {
     width: 100%;
     margin-left: -10px;
 }
@@ -195,10 +208,10 @@ select {
     gap: 10px;
 }
 
-.cancel-btn, .submit-btn {
+.cancel-btn,
+.submit-btn {
     padding: 10px 20px;
     border: none;
-    border-radius: 1px;
     cursor: pointer;
 }
 
@@ -213,7 +226,7 @@ select {
     color: #960a1d;
 }
 
-.space{
+.space {
     padding-top: 100px;
 }
 
@@ -264,7 +277,7 @@ select {
         margin-top: -10px;
     }
 
-    .space{
+    .space {
         padding-top: 50px;
     }
 
@@ -272,21 +285,19 @@ select {
         font-size: 15px;
         width: 25%;
         padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 
-    .category {
-        background-color: #A58C6D;
-        color: white;
-        padding: 10px;
-        border: none;
-        font-size: 14px;
-        text-align: center;
-        width: 10%;
-        max-width: 10%;
-        box-sizing: border-box;
-    }
-
-    .selector{
+    .selector {
         width: 100%;
         margin-left: -10px;
     }
@@ -310,17 +321,19 @@ select {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 15%;
-        max-width: 15%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 }
 
 
-@media (max-width: 1023px){
+@media (max-width: 1023px) {
     .background {
         overflow: hidden;
     }
@@ -366,7 +379,7 @@ select {
         margin-top: -10px;
     }
 
-    .space{
+    .space {
         padding-top: 10px;
     }
 
@@ -374,21 +387,33 @@ select {
         font-size: 14px;
         width: 20%;
         padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 
     .category {
         background-color: #A58C6D;
         color: white;
-        padding: 8px;
+        padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 10%;
-        max-width: 10%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 
-    .selector{
+    .selector {
         width: 100%;
         margin-left: -10px;
     }
@@ -412,11 +437,13 @@ select {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 15%;
-        max-width: 15%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 
@@ -486,7 +513,7 @@ select {
         margin-top: -10px;
     }
 
-    .space{
+    .space {
         padding-top: 10px;
     }
 
@@ -494,9 +521,19 @@ select {
         font-size: 14px;
         width: 20%;
         padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 
-    .selector{
+    .selector {
         width: 100%;
         margin-left: -10px;
     }
@@ -587,7 +624,7 @@ select {
         margin-top: -10px;
     }
 
-    .space{
+    .space {
         padding-top: 10px;
     }
 
@@ -595,21 +632,33 @@ select {
         font-size: 14px;
         width: 30%;
         padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 
     .category {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 10%;
-        max-width: 10%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 
-    .selector{
+    .selector {
         width: 50%;
         margin-left: -10px;
     }
@@ -633,11 +682,13 @@ select {
         background-color: #A58C6D;
         color: white;
         padding: 10px;
+        margin-top: 10px;
         border: none;
         font-size: 14px;
         text-align: center;
-        width: 15%;
-        max-width: 15%;
+        display: inline-block;
+        min-width: 20%;
+        max-width: fit-content;
         box-sizing: border-box;
     }
 
@@ -681,7 +732,8 @@ select {
         flex-wrap: nowrap;
     }
 
-    .cancel-btn, .submit-btn {
+    .cancel-btn,
+    .submit-btn {
         padding: 10px 20px;
         font-size: 15px;
         white-space: nowrap;
@@ -700,7 +752,7 @@ select {
     }
 }
 
-@media (max-width: 420px){
+@media (max-width: 420px) {
     .container {
         overflow-x: hidden;
     }
@@ -709,11 +761,21 @@ select {
         width: 108%;
     }
 
-    .select{
+    .select {
         width: 10%;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
     }
 
-    .selector{
+    .selector {
         width: 40%;
     }
 
@@ -745,7 +807,8 @@ select {
         margin-right: -45px;
     }
 
-    .cancel-btn, .submit-btn {
+    .cancel-btn,
+    .submit-btn {
         padding: 8px 18px;
         font-size: 15px;
         white-space: nowrap;
