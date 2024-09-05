@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    min-height: 80vh;
+    min-height: 70vh;
     max-height: calc(100vh - 200px);
     margin: 0 auto;
     box-sizing: border-box;
@@ -815,7 +815,7 @@
         transform-origin: center center;
         transition: transform 0.3s ease;
         margin-top: -20px;
-        min-height: 80vh;
+        min-height: 70vh;
     }
 
     .wrapper {
@@ -982,6 +982,7 @@
     #transaction-content .table-header,
     #transaction-content .table-row {
         flex-wrap: wrap;
+        margin-bottom: -20px;
     }
 
     #transaction-content .table-header .col-1 {
@@ -1050,7 +1051,7 @@
         transform-origin: center center;
         transition: transform 0.3s ease;
         margin-top: -20px;
-        min-height: 80vh;
+        min-height: 70vh;
     }
 
     .wrapper {
@@ -1229,6 +1230,7 @@
     #transaction-content .table-header,
     #transaction-content .table-row {
         flex-wrap: wrap;
+        margin-bottom: -20px;
     }
 
     #transaction-content .table-header .col-1 {
@@ -1362,7 +1364,7 @@
         margin-left: -20px;
         box-sizing: border-box;
         overflow-x: hidden;
-        min-height: 80vh;
+        min-height: 70vh;
     }
 
     .wrapper {
@@ -1514,7 +1516,7 @@
     }
 
     #transaction-content {
-        width: 80vh;
+        width: 70vh;
     }
 
     #transaction-content .transaction-header {
@@ -1540,6 +1542,7 @@
     #transaction-content .table-header,
     #transaction-content .table-row {
         flex-wrap: wrap;
+        margin-bottom: -20px;
     }
 
     #transaction-content .table-header .col-1,
@@ -1693,7 +1696,7 @@
         margin-left: -20px;
         box-sizing: border-box;
         overflow-x: hidden;
-        min-height: 80vh;
+        min-height: 70vh;
     }
 
     .wrapper {
@@ -1825,7 +1828,7 @@
     }
 
     #transaction-content {
-        width: 50vh;
+        width: 60vh;
     }
 
     #transaction-content .transaction-header {
@@ -1861,6 +1864,7 @@
     #transaction-content .table-header,
     #transaction-content .table-row {
         flex-wrap: wrap;
+        margin-bottom: -20px;
     }
 
     #transaction-content .table-header .col-1,
@@ -1932,6 +1936,15 @@
     #transaction-content {
         width: 40vh;
     }
+
+    #change-password-content .form-horizontal {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -5%;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1954,12 +1967,53 @@
     #transaction-content {
         width: 40vh;
     }
+
+    #change-password-content .form-horizontal {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -10%;
+    }
 }
 
 @media screen and (max-width: 376px){
     #transaction-content {
         width: 50vh;
     }
+    #change-password-content .form-horizontal {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -20%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    #transaction-content {
+        width: 40vh;
+    }
+
+    #transaction-content #payment-date {
+        width: 70%;
+        margin-top: 5px;
+        padding: 10px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 5px;
+        border: 1px solid #ccc;
+        padding-right: 30px;
+    }
+
+
     #change-password-content .form-horizontal {
         width: 300px;
         display: flex;
